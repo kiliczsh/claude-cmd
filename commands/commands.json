@@ -1,0 +1,2310 @@
+[
+  {
+    "id": "agent/agent-browser-automation",
+    "name": "Agent Browser Automation",
+    "description": "Automate browser interactions for development testing using Puppeteer MCP",
+    "filePath": "agent/agent-browser-automation.md",
+    "author": "wcygan",
+    "tags": [
+      "agent"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/merge/agent-prep-merge",
+    "name": "Agent Prep Merge",
+    "description": "Prepare branches for merging across multiple worktrees and coordinate integration",
+    "filePath": "agent/merge/agent-prep-merge.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "merge"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-accessibility-expert",
+    "name": "Agent Persona Accessibility Expert",
+    "description": "Transform into accessibility expert for WCAG compliance and inclusive design",
+    "filePath": "agent/persona/agent-persona-accessibility-expert.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-api-designer",
+    "name": "Agent Persona Api Designer",
+    "description": "Transform into an API design specialist who creates well-structured, developer-friendly APIs",
+    "filePath": "agent/persona/agent-persona-api-designer.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-backend-specialist",
+    "name": "Agent Persona Backend Specialist",
+    "description": "Transform into backend specialist for scalable API and system design",
+    "filePath": "agent/persona/agent-persona-backend-specialist.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-cloud-architect",
+    "name": "Agent Persona Cloud Architect",
+    "description": "Cloud architect persona for designing scalable, secure cloud infrastructure using modern cloud-native technologies",
+    "filePath": "agent/persona/agent-persona-cloud-architect.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-code-reviewer",
+    "name": "Agent Persona Code Reviewer",
+    "description": "Comprehensive code review with security, quality, and maintainability analysis",
+    "filePath": "agent/persona/agent-persona-code-reviewer.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-compliance-officer",
+    "name": "Agent Persona Compliance Officer",
+    "description": "Transform into a compliance officer for regulatory and security framework implementation",
+    "filePath": "agent/persona/agent-persona-compliance-officer.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-data-engineer",
+    "name": "Agent Persona Data Engineer",
+    "description": "Activate data engineer persona for scalable pipeline and ETL development",
+    "filePath": "agent/persona/agent-persona-data-engineer.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-database-architect",
+    "name": "Agent Persona Database Architect",
+    "description": "Transform into a database architect for efficient schema design and data management",
+    "filePath": "agent/persona/agent-persona-database-architect.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-debugger",
+    "name": "Agent Persona Debugger",
+    "description": "Transform into a systematic debugger for methodical bug investigation and resolution",
+    "filePath": "agent/persona/agent-persona-debugger.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-devops-engineer",
+    "name": "Agent Persona Devops Engineer",
+    "description": "Transform into a DevOps engineer for CI/CD pipelines, infrastructure automation, and deployment strategies",
+    "filePath": "agent/persona/agent-persona-devops-engineer.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-frontend-specialist",
+    "name": "Agent Persona Frontend Specialist",
+    "description": "Transform into a frontend specialist for modern, performant UI development",
+    "filePath": "agent/persona/agent-persona-frontend-specialist.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-implementation-engineer",
+    "name": "Agent Persona Implementation Engineer",
+    "description": "Activate implementation engineer persona for production-ready code development",
+    "filePath": "agent/persona/agent-persona-implementation-engineer.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-infrastructure-engineer",
+    "name": "Agent Persona Infrastructure Engineer",
+    "description": "Activate infrastructure engineer persona for cloud-native infrastructure design",
+    "filePath": "agent/persona/agent-persona-infrastructure-engineer.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-localization-engineer",
+    "name": "Agent Persona Localization Engineer",
+    "description": "Activate localization engineer persona for global i18n and l10n implementation",
+    "filePath": "agent/persona/agent-persona-localization-engineer.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-machine-learning-engineer",
+    "name": "Agent Persona Machine Learning Engineer",
+    "description": "Activate ML engineer persona for production ML systems and MLOps",
+    "filePath": "agent/persona/agent-persona-machine-learning-engineer.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-mobile-developer",
+    "name": "Agent Persona Mobile Developer",
+    "description": "Systematic mobile app development workflow with cross-platform optimization and device integration",
+    "filePath": "agent/persona/agent-persona-mobile-developer.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-performance-engineer",
+    "name": "Agent Persona Performance Engineer",
+    "description": "Systematic performance optimization with measurement, profiling, and scalable solutions",
+    "filePath": "agent/persona/agent-persona-performance-engineer.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-product-manager",
+    "name": "Agent Persona Product Manager",
+    "description": "Activate product manager persona for strategic product development and stakeholder management",
+    "filePath": "agent/persona/agent-persona-product-manager.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-qa-analyst",
+    "name": "Agent Persona Qa Analyst",
+    "description": "Systematic quality assurance analysis with comprehensive testing strategies and defect management",
+    "filePath": "agent/persona/agent-persona-qa-analyst.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-refactoring-specialist",
+    "name": "Agent Persona Refactoring Specialist",
+    "description": "Activate refactoring specialist persona for systematic code quality improvement",
+    "filePath": "agent/persona/agent-persona-refactoring-specialist.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-release-manager",
+    "name": "Agent Persona Release Manager",
+    "description": "Activate release manager persona for orchestrating software deployments",
+    "filePath": "agent/persona/agent-persona-release-manager.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-requirements-analyst",
+    "name": "Agent Persona Requirements Analyst",
+    "description": "Transform into a requirements analyst for comprehensive system requirements gathering and documentation",
+    "filePath": "agent/persona/agent-persona-requirements-analyst.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-security-auditor",
+    "name": "Agent Persona Security Auditor",
+    "description": "Transform into a security auditor for comprehensive vulnerability assessment and risk analysis",
+    "filePath": "agent/persona/agent-persona-security-auditor.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-site-reliability-engineer",
+    "name": "Agent Persona Site Reliability Engineer",
+    "description": "Transform into an SRE persona for reliability engineering, monitoring, and incident response",
+    "filePath": "agent/persona/agent-persona-site-reliability-engineer.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-software-architect",
+    "name": "Agent Persona Software Architect",
+    "description": "Transform into a software architect for comprehensive system design, technology evaluation, and architectural standards establishment",
+    "filePath": "agent/persona/agent-persona-software-architect.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-system-integration-engineer",
+    "name": "Agent Persona System Integration Engineer",
+    "description": "Transform into a system integration engineer for designing and implementing robust integrations between disparate systems and services",
+    "filePath": "agent/persona/agent-persona-system-integration-engineer.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-technical-writer",
+    "name": "Agent Persona Technical Writer",
+    "description": "Transform into a technical writer for comprehensive documentation creation, content strategy, and information architecture",
+    "filePath": "agent/persona/agent-persona-technical-writer.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-test-automation-engineer",
+    "name": "Agent Persona Test Automation Engineer",
+    "description": "Transform into a test automation engineer for designing and implementing comprehensive automated testing frameworks and CI/CD integration",
+    "filePath": "agent/persona/agent-persona-test-automation-engineer.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-test-engineer",
+    "name": "Agent Persona Test Engineer",
+    "description": "Transform into a comprehensive test engineer for designing robust testing strategies, implementing automated test suites, and ensuring quality gates across all testing levels",
+    "filePath": "agent/persona/agent-persona-test-engineer.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "agent/persona/agent-persona-ux-engineer",
+    "name": "Agent Persona Ux Engineer",
+    "description": "Transform into a UX engineer for user-centered interface design, accessibility implementation, and design system development",
+    "filePath": "agent/persona/agent-persona-ux-engineer.md",
+    "author": "wcygan",
+    "tags": [
+      "agent",
+      "persona"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "analyze/code/elaborate",
+    "name": "Elaborate",
+    "description": "Generate comprehensive technical analysis and implementation guide with adaptive research and project-specific optimization",
+    "filePath": "analyze/code/elaborate.md",
+    "author": "wcygan",
+    "tags": [
+      "analyze",
+      "code"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "analyze/code/map",
+    "name": "Map",
+    "description": "Ultra-fast strategic roadmap generation using 8 parallel sub-agents for comprehensive analysis",
+    "filePath": "analyze/code/map.md",
+    "author": "wcygan",
+    "tags": [
+      "analyze",
+      "code"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "analyze/code/schema",
+    "name": "Schema",
+    "description": "Ultra-fast parallel database schema analysis using 8 sub-agents for comprehensive coverage",
+    "filePath": "analyze/code/schema.md",
+    "author": "wcygan",
+    "tags": [
+      "analyze",
+      "code"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "analyze/data/data-flow",
+    "name": "Data Flow",
+    "description": "Analyze and design data processing pipelines with automatic source detection and transformation logic",
+    "filePath": "analyze/data/data-flow.md",
+    "author": "wcygan",
+    "tags": [
+      "analyze",
+      "data"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "analyze/data/data-viz",
+    "name": "Data Viz",
+    "description": "Generate interactive data visualizations and dashboards with intelligent chart selection and real-time updates",
+    "filePath": "analyze/data/data-viz.md",
+    "author": "wcygan",
+    "tags": [
+      "analyze",
+      "data"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "analyze/data/visualize",
+    "name": "Visualize",
+    "description": "Generate explanatory diagrams from code and architecture analysis",
+    "filePath": "analyze/data/visualize.md",
+    "author": "wcygan",
+    "tags": [
+      "analyze",
+      "data"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "analyze/db/db-optimize",
+    "name": "Db Optimize",
+    "description": "Comprehensive database performance optimization with intelligent analysis and automated improvements",
+    "filePath": "analyze/db/db-optimize.md",
+    "author": "wcygan",
+    "tags": [
+      "analyze",
+      "db"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "analyze/research/deep-dive",
+    "name": "Deep Dive",
+    "description": "Systematic multi-perspective investigation with extended thinking and state management",
+    "filePath": "analyze/research/deep-dive.md",
+    "author": "wcygan",
+    "tags": [
+      "analyze",
+      "research"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "analyze/research/deep-web-research",
+    "name": "Deep Web Research",
+    "description": "Comprehensive parallel web research with multi-agent analysis and synthesis",
+    "filePath": "analyze/research/deep-web-research.md",
+    "author": "wcygan",
+    "tags": [
+      "analyze",
+      "research"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "analyze/research/investigate",
+    "name": "Investigate",
+    "description": "Conduct thorough investigation using codebase analysis and web research for optimal solutions",
+    "filePath": "analyze/research/investigate.md",
+    "author": "wcygan",
+    "tags": [
+      "analyze",
+      "research"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "analyze/research/quick-web-research",
+    "name": "Quick Web Research",
+    "description": "Ultra-fast parallel web research using sub-agents for 5-10x speedup",
+    "filePath": "analyze/research/quick-web-research.md",
+    "author": "wcygan",
+    "tags": [
+      "analyze",
+      "research"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "analyze/think/think",
+    "name": "Think",
+    "description": "Engage in deep, structured reasoning using sequential thinking",
+    "filePath": "analyze/think/think.md",
+    "author": "wcygan",
+    "tags": [
+      "analyze",
+      "think"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "code/analyze/analyze-deps",
+    "name": "Analyze Deps",
+    "description": "Comprehensive dependency analysis with security auditing and maintenance insights",
+    "filePath": "code/analyze/analyze-deps.md",
+    "author": "wcygan",
+    "tags": [
+      "code",
+      "analyze"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "code/analyze/bottleneck",
+    "name": "Bottleneck",
+    "description": "Systematic performance bottleneck analysis and optimization across application stack",
+    "filePath": "code/analyze/bottleneck.md",
+    "author": "wcygan",
+    "tags": [
+      "code",
+      "analyze"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "code/analyze/dependencies",
+    "name": "Dependencies",
+    "description": "Ultra-fast parallel dependency analysis using 10 sub-agents for 10x speedup",
+    "filePath": "code/analyze/dependencies.md",
+    "author": "wcygan",
+    "tags": [
+      "code",
+      "analyze"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "code/analyze/deps",
+    "name": "Deps",
+    "description": "Intelligent dependency analysis and management with security auditing",
+    "filePath": "code/analyze/deps.md",
+    "author": "wcygan",
+    "tags": [
+      "code",
+      "analyze"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "code/analyze/technical-debt",
+    "name": "Technical Debt",
+    "description": "Comprehensive technical debt analysis with actionable remediation strategies",
+    "filePath": "code/analyze/technical-debt.md",
+    "author": "wcygan",
+    "tags": [
+      "code",
+      "analyze"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "code/fix/bug-fix",
+    "name": "Bug Fix",
+    "description": "Systematic bug investigation and fix workflow with GitHub integration",
+    "filePath": "code/fix/bug-fix.md",
+    "author": "wcygan",
+    "tags": [
+      "code",
+      "fix"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "code/generate/api",
+    "name": "Api",
+    "description": "Generate comprehensive API endpoint with framework detection, implementation, tests, and documentation",
+    "filePath": "code/generate/api.md",
+    "author": "wcygan",
+    "tags": [
+      "code",
+      "generate"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "code/migrate/deno-ify",
+    "name": "Deno Ify",
+    "description": "Convert existing shell scripts to Deno TypeScript scripts with cross-platform compatibility and type safety",
+    "filePath": "code/migrate/deno-ify.md",
+    "author": "wcygan",
+    "tags": [
+      "code",
+      "migrate"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "code/migrate/migrate",
+    "name": "Migrate",
+    "description": "Ultra-fast parallel migration planning using 10 sub-agents for comprehensive impact analysis",
+    "filePath": "code/migrate/migrate.md",
+    "author": "wcygan",
+    "tags": [
+      "code",
+      "migrate"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "code/navigate/related",
+    "name": "Related",
+    "description": "Navigate intelligently between related files across the codebase",
+    "filePath": "code/navigate/related.md",
+    "author": "wcygan",
+    "tags": [
+      "code",
+      "navigate"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "code/refactor/refactor",
+    "name": "Refactor",
+    "description": "Ultra-fast parallel refactoring analysis with 8-10x speedup through concurrent smell detection and intelligent improvement strategies",
+    "filePath": "code/refactor/refactor.md",
+    "author": "wcygan",
+    "tags": [
+      "code",
+      "refactor"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "code/refactor/simplify",
+    "name": "Simplify",
+    "description": "Ultra-fast parallel code simplification using 10 sub-agents for 10x speedup",
+    "filePath": "code/refactor/simplify.md",
+    "author": "wcygan",
+    "tags": [
+      "code",
+      "refactor"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "code/refactor/standardize",
+    "name": "Standardize",
+    "description": "Apply consistent coding standards, naming conventions, and architectural patterns across codebase",
+    "filePath": "code/refactor/standardize.md",
+    "author": "wcygan",
+    "tags": [
+      "code",
+      "refactor"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/db/context-load-dragonfly",
+    "name": "Context Load Dragonfly",
+    "description": "Load comprehensive DragonflyDB documentation context for development",
+    "filePath": "context/db/context-load-dragonfly.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "db"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/db/context-load-postgres",
+    "name": "Context Load Postgres",
+    "description": "Load comprehensive PostgreSQL documentation context with intelligent caching and state management",
+    "filePath": "context/db/context-load-postgres.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "db"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/db/context-load-redpanda",
+    "name": "Context Load Redpanda",
+    "description": "Load comprehensive Redpanda streaming platform documentation context",
+    "filePath": "context/db/context-load-redpanda.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "db"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/db/context-load-scylla",
+    "name": "Context Load Scylla",
+    "description": "Load comprehensive ScyllaDB documentation context for development",
+    "filePath": "context/db/context-load-scylla.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "db"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/deno/context-load-deno-fresh",
+    "name": "Context Load Deno Fresh",
+    "description": "Load comprehensive Deno Fresh framework context with islands architecture and modern styling",
+    "filePath": "context/deno/context-load-deno-fresh.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "deno"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/deno/context-load-deno-scripting",
+    "name": "Context Load Deno Scripting",
+    "description": "Load comprehensive Deno scripting documentation context with project-specific optimization",
+    "filePath": "context/deno/context-load-deno-scripting.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "deno"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/docs/context-load-docusaurus",
+    "name": "Context Load Docusaurus",
+    "description": "Load comprehensive Docusaurus v3 documentation context with parallel sub-agents for maximum performance",
+    "filePath": "context/docs/context-load-docusaurus.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "docs"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/fedora-basics",
+    "name": "Fedora Basics",
+    "description": "Load essential Fedora Linux knowledge for daily system usage",
+    "filePath": "context/fedora-basics.md",
+    "author": "wcygan",
+    "tags": [
+      "context"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/go/context-load-go-concurrency",
+    "name": "Context Load Go Concurrency",
+    "description": "Systematic Go concurrency documentation loading with comprehensive context analysis",
+    "filePath": "context/go/context-load-go-concurrency.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "go"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/go/context-load-go-connectrpc",
+    "name": "Context Load Go Connectrpc",
+    "description": "Load comprehensive Go ConnectRPC documentation context with project-specific optimization",
+    "filePath": "context/go/context-load-go-connectrpc.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "go"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/go/context-load-go-web",
+    "name": "Context Load Go Web",
+    "description": "Load comprehensive Go web development documentation context with framework-specific optimization",
+    "filePath": "context/go/context-load-go-web.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "go"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/java/context-load-java-quarkus",
+    "name": "Context Load Java Quarkus",
+    "description": "Load comprehensive Java Quarkus documentation context with project-specific optimization",
+    "filePath": "context/java/context-load-java-quarkus.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "java"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/java/context-load-java-spring",
+    "name": "Context Load Java Spring",
+    "description": "Load comprehensive Java Spring Framework documentation context for development",
+    "filePath": "context/java/context-load-java-spring.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "java"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/java/context-load-java-temporal",
+    "name": "Context Load Java Temporal",
+    "description": "Load comprehensive Java Temporal workflow documentation with project-specific optimization",
+    "filePath": "context/java/context-load-java-temporal.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "java"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/k8s/context-load-cilium",
+    "name": "Context Load Cilium",
+    "description": "Load comprehensive Cilium eBPF networking and security documentation with project-specific optimization",
+    "filePath": "context/k8s/context-load-cilium.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "k8s"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/k8s/context-load-flux",
+    "name": "Context Load Flux",
+    "description": "Load comprehensive Flux GitOps documentation context with intelligent project analysis and state management",
+    "filePath": "context/k8s/context-load-flux.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "k8s"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/k8s/context-load-k8s",
+    "name": "Context Load K8s",
+    "description": "Load comprehensive Kubernetes documentation context with cluster-specific optimization",
+    "filePath": "context/k8s/context-load-k8s.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "k8s"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/k8s/context-load-talos",
+    "name": "Context Load Talos",
+    "description": "Load comprehensive Talos Linux Kubernetes documentation with environment-specific optimization",
+    "filePath": "context/k8s/context-load-talos.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "k8s"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/observability/context-load-logging",
+    "name": "Context Load Logging",
+    "description": "Load comprehensive logging and observability documentation context with project-specific optimization",
+    "filePath": "context/observability/context-load-logging.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "observability"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/observability/context-load-observability",
+    "name": "Context Load Observability",
+    "description": "Load comprehensive observability documentation with project-specific optimization and strategic context loading",
+    "filePath": "context/observability/context-load-observability.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "observability"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/ops/context-load-fedora",
+    "name": "Context Load Fedora",
+    "description": "Load Fedora Linux expertise with system information and configuration guidance",
+    "filePath": "context/ops/context-load-fedora.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "ops"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/project/auto",
+    "name": "Auto",
+    "description": "Automatically detect and load comprehensive project context with intelligent environment analysis",
+    "filePath": "context/project/auto.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "project"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/rust/context-load-rust-async",
+    "name": "Context Load Rust Async",
+    "description": "Load comprehensive Rust async programming context with project-specific optimization",
+    "filePath": "context/rust/context-load-rust-async.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "rust"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/rust/context-load-rust-db",
+    "name": "Context Load Rust Db",
+    "description": "Load comprehensive Rust database documentation context with project-specific ORM optimization",
+    "filePath": "context/rust/context-load-rust-db.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "rust"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/rust/context-load-rust-web",
+    "name": "Context Load Rust Web",
+    "description": "Load comprehensive Rust web development documentation context with project-specific optimization",
+    "filePath": "context/rust/context-load-rust-web.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "rust"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/security/context-load-security",
+    "name": "Context Load Security",
+    "description": "Load comprehensive Kubernetes security documentation context with cluster-aware analysis",
+    "filePath": "context/security/context-load-security.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "security"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/testing/context-load-testing-deno",
+    "name": "Context Load Testing Deno",
+    "description": "Load comprehensive Deno testing documentation context with project-specific optimization",
+    "filePath": "context/testing/context-load-testing-deno.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "testing"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/testing/context-load-testing-go",
+    "name": "Context Load Testing Go",
+    "description": "Load comprehensive Go testing documentation with adaptive project analysis and framework detection",
+    "filePath": "context/testing/context-load-testing-go.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "testing"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/testing/context-load-testing-java",
+    "name": "Context Load Testing Java",
+    "description": "Load comprehensive Java testing documentation with project-specific analysis and adaptive context loading",
+    "filePath": "context/testing/context-load-testing-java.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "testing"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/testing/context-load-testing-rust",
+    "name": "Context Load Testing Rust",
+    "description": "Load comprehensive Rust testing documentation with adaptive framework detection and project-specific optimization",
+    "filePath": "context/testing/context-load-testing-rust.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "testing"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/web/context-load-fresh-connect-stack",
+    "name": "Context Load Fresh Connect Stack",
+    "description": "Load comprehensive context about Fresh + ConnectRPC full-stack architecture with project-specific analysis",
+    "filePath": "context/web/context-load-fresh-connect-stack.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "web"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/web/context-load-gh-cli",
+    "name": "Context Load Gh Cli",
+    "description": "Load comprehensive GitHub CLI context with dynamic repository analysis and workflow optimization",
+    "filePath": "context/web/context-load-gh-cli.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "web"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/web/context-load-github-actions",
+    "name": "Context Load Github Actions",
+    "description": "Load comprehensive GitHub Actions CI/CD documentation with adaptive project-specific context and modern workflow patterns",
+    "filePath": "context/web/context-load-github-actions.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "web"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/web/context-load-offline-data-platform",
+    "name": "Context Load Offline Data Platform",
+    "description": "Load comprehensive lakehouse architecture context with parallel documentation loading and project-specific optimization",
+    "filePath": "context/web/context-load-offline-data-platform.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "web"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/web/context-load-tailwind",
+    "name": "Context Load Tailwind",
+    "description": "Load comprehensive Tailwind CSS documentation context with adaptive framework integration and project-specific optimization",
+    "filePath": "context/web/context-load-tailwind.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "web"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "context/web/context-load-temporal",
+    "name": "Context Load Temporal",
+    "description": "Load comprehensive Temporal workflow orchestration context with adaptive research and enterprise-grade implementation patterns",
+    "filePath": "context/web/context-load-temporal.md",
+    "author": "wcygan",
+    "tags": [
+      "context",
+      "web"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "directory-cleanup",
+    "name": "Directory Cleanup",
+    "description": "Organize and restructure project directories following framework best practices",
+    "filePath": "directory-cleanup.md",
+    "author": "github.com/kingler",
+    "tags": [
+      "organization",
+      "cleanup",
+      "structure",
+      "refactoring",
+      "maintenance"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "docs/analyze/explain",
+    "name": "Explain",
+    "description": "Ultra-fast parallel technical explanations using 10 sub-agents for comprehensive multi-angle analysis",
+    "filePath": "docs/analyze/explain.md",
+    "author": "wcygan",
+    "tags": [
+      "docs",
+      "analyze"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "docs/generate/api-docs",
+    "name": "Api Docs",
+    "description": "Generate comprehensive API documentation with OpenAPI specs and interactive sites",
+    "filePath": "docs/generate/api-docs.md",
+    "author": "wcygan",
+    "tags": [
+      "docs",
+      "generate"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "docs/generate/changelog",
+    "name": "Changelog",
+    "description": "Ultra-fast parallel changelog generation using 10 sub-agents for instant comprehensive analysis",
+    "filePath": "docs/generate/changelog.md",
+    "author": "wcygan",
+    "tags": [
+      "docs",
+      "generate"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "docs/generate/document",
+    "name": "Document",
+    "description": "Generate comprehensive user-facing documentation with intelligent analysis and state management",
+    "filePath": "docs/generate/document.md",
+    "author": "wcygan",
+    "tags": [
+      "docs",
+      "generate"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "docs/generate/onboard",
+    "name": "Onboard",
+    "description": "Lightning-fast parallel environment setup using 10 sub-agents for 10x speedup",
+    "filePath": "docs/generate/onboard.md",
+    "author": "wcygan",
+    "tags": [
+      "docs",
+      "generate"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "docs/manage/docs-add",
+    "name": "Docs Add",
+    "description": "Generate comprehensive documentation with intelligent content organization and Docusaurus integration",
+    "filePath": "docs/manage/docs-add.md",
+    "author": "wcygan",
+    "tags": [
+      "docs",
+      "manage"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "docs/manage/docs-init",
+    "name": "Docs Init",
+    "description": "Initialize Docusaurus documentation site with Deno lifecycle integration",
+    "filePath": "docs/manage/docs-init.md",
+    "author": "wcygan",
+    "tags": [
+      "docs",
+      "manage"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "docs/manage/docs-update",
+    "name": "Docs Update",
+    "description": "Update and maintain Docusaurus documentation by analyzing codebase changes with automated content refresh",
+    "filePath": "docs/manage/docs-update.md",
+    "author": "wcygan",
+    "tags": [
+      "docs",
+      "manage"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "git/commit/commit",
+    "name": "Commit",
+    "description": "Create a git commit",
+    "filePath": "git/commit/commit.md",
+    "author": "wcygan",
+    "tags": [
+      "git",
+      "commit"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "git/commit/commit-push",
+    "name": "Commit Push",
+    "description": "Create a git commit and push to remote",
+    "filePath": "git/commit/commit-push.md",
+    "author": "wcygan",
+    "tags": [
+      "git",
+      "commit"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "git/merge/merge-main",
+    "name": "Merge Main",
+    "description": "Merge the main git branch into the current git branch and resolve merge conflicts",
+    "filePath": "git/merge/merge-main.md",
+    "author": "wcygan",
+    "tags": [
+      "git",
+      "merge"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "git/pr/pr-check",
+    "name": "Pr Check",
+    "description": "Ultra-fast parallel PR validation with 7-9x speedup through concurrent multi-agent analysis",
+    "filePath": "git/pr/pr-check.md",
+    "author": "wcygan",
+    "tags": [
+      "git",
+      "pr"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "git/pr/pr-create",
+    "name": "Pr Create",
+    "description": "Create pull requests with intelligent analysis and programmatic workflow",
+    "filePath": "git/pr/pr-create.md",
+    "author": "wcygan",
+    "tags": [
+      "git",
+      "pr"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "git/pr/pr-review",
+    "name": "Pr Review",
+    "description": "Ultra-fast PR review with 8-10x speedup through parallel sub-agent analysis",
+    "filePath": "git/pr/pr-review.md",
+    "author": "wcygan",
+    "tags": [
+      "git",
+      "pr"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "git/pr/pr-update",
+    "name": "Pr Update",
+    "description": "Update existing pull requests with comprehensive metadata management",
+    "filePath": "git/pr/pr-update.md",
+    "author": "wcygan",
+    "tags": [
+      "git",
+      "pr"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "git/resolve-merge-conflicts",
+    "name": "Resolve Merge Conflicts",
+    "description": "Resolve git merge conflicts with intelligent context analysis",
+    "filePath": "git/resolve-merge-conflicts.md",
+    "author": "wcygan",
+    "tags": [
+      "git"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "git/review/review-git",
+    "name": "Review Git",
+    "description": "Comprehensive automated git repository review with security analysis and quality assessment",
+    "filePath": "git/review/review-git.md",
+    "author": "wcygan",
+    "tags": [
+      "git",
+      "review"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "github/github-codesearch",
+    "name": "Github Codesearch",
+    "description": "Search GitHub for code using GitHub CLI with precise line number permalinks",
+    "filePath": "github/github-codesearch.md",
+    "author": "wcygan",
+    "tags": [
+      "github"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "kubernetes/k8s-debug",
+    "name": "K8s Debug",
+    "description": "Systematically diagnose and troubleshoot Kubernetes issues",
+    "filePath": "kubernetes/k8s-debug.md",
+    "author": "wcygan",
+    "tags": [
+      "kubernetes"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "meta/command/generate-command",
+    "name": "Generate Command",
+    "description": "Intelligent slash command generator with parallel analysis and gold standard best practices",
+    "filePath": "meta/command/generate-command.md",
+    "author": "wcygan",
+    "tags": [
+      "meta",
+      "command"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "meta/command/ideate-commands",
+    "name": "Ideate Commands",
+    "description": "Generate intelligent project-specific slash command ideas through comprehensive codebase analysis",
+    "filePath": "meta/command/ideate-commands.md",
+    "author": "wcygan",
+    "tags": [
+      "meta",
+      "command"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "meta/extract/knowledge-extract",
+    "name": "Knowledge Extract",
+    "description": "Extract comprehensive domain knowledge and architectural patterns using parallel analysis",
+    "filePath": "meta/extract/knowledge-extract.md",
+    "author": "wcygan",
+    "tags": [
+      "meta",
+      "extract"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "meta/ideate/ideate-new",
+    "name": "Ideate New",
+    "description": "Discover and propose new Claude command opportunities through systematic analysis and parallel research",
+    "filePath": "meta/ideate/ideate-new.md",
+    "author": "wcygan",
+    "tags": [
+      "meta",
+      "ideate"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "meta/reflect/reflection",
+    "name": "Reflection",
+    "description": "Ultra-fast comprehensive retrospective analysis using parallel reflection agents - 6-8x faster than sequential analysis",
+    "filePath": "meta/reflect/reflection.md",
+    "author": "wcygan",
+    "tags": [
+      "meta",
+      "reflect"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "meta/search/search-smart",
+    "name": "Search Smart",
+    "description": "Intelligent code search orchestrator using modern tools with parallel analysis capabilities",
+    "filePath": "meta/search/search-smart.md",
+    "author": "wcygan",
+    "tags": [
+      "meta",
+      "search"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "meta/util/translate",
+    "name": "Translate",
+    "description": "Convert code between programming languages with 8x faster performance using parallel translation agents",
+    "filePath": "meta/util/translate.md",
+    "author": "wcygan",
+    "tags": [
+      "meta",
+      "util"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "ops/ci/ci-gen",
+    "name": "Ci Gen",
+    "description": "Generate comprehensive CI/CD workflows with intelligent technology stack detection and best practices",
+    "filePath": "ops/ci/ci-gen.md",
+    "author": "wcygan",
+    "tags": [
+      "ops",
+      "ci"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "ops/deploy/containerize",
+    "name": "Containerize",
+    "description": "Production-ready containerization orchestrator with multi-stage builds, security hardening, and Kubernetes optimization",
+    "filePath": "ops/deploy/containerize.md",
+    "author": "wcygan",
+    "tags": [
+      "ops",
+      "deploy"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "ops/deploy/deploy",
+    "name": "Deploy",
+    "description": "Intelligent Kubernetes deployment orchestrator with manifest generation and CI/CD integration",
+    "filePath": "ops/deploy/deploy.md",
+    "author": "wcygan",
+    "tags": [
+      "ops",
+      "deploy"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "ops/fedora/fedora-expert",
+    "name": "Fedora Expert",
+    "description": "Comprehensive Fedora Linux expertise with instant parallel analysis",
+    "filePath": "ops/fedora/fedora-expert.md",
+    "author": "wcygan",
+    "tags": [
+      "ops",
+      "fedora"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "ops/infra/health-check",
+    "name": "Health Check",
+    "description": "Comprehensive health monitoring orchestrator with parallel system assessment and automated alerting",
+    "filePath": "ops/infra/health-check.md",
+    "author": "wcygan",
+    "tags": [
+      "ops",
+      "infra"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "ops/infra/infra-status",
+    "name": "Infra Status",
+    "description": "Comprehensive Talos Kubernetes cluster health monitoring with parallel infrastructure analysis",
+    "filePath": "ops/infra/infra-status.md",
+    "author": "wcygan",
+    "tags": [
+      "ops",
+      "infra"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "ops/monitor/monitor",
+    "name": "Monitor",
+    "description": "Comprehensive monitoring and observability orchestrator with parallel deployment automation",
+    "filePath": "ops/monitor/monitor.md",
+    "author": "wcygan",
+    "tags": [
+      "ops",
+      "monitor"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "ops/monitor/observe",
+    "name": "Observe",
+    "description": "Transform applications into fully observable systems with comprehensive metrics, logging, tracing, and monitoring dashboards",
+    "filePath": "ops/monitor/observe.md",
+    "author": "wcygan",
+    "tags": [
+      "ops",
+      "monitor"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "ops/perf/benchmark",
+    "name": "Benchmark",
+    "description": "Comprehensive performance analysis and optimization orchestrator with parallel benchmarking capabilities",
+    "filePath": "ops/perf/benchmark.md",
+    "author": "wcygan",
+    "tags": [
+      "ops",
+      "perf"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "ops/perf/perf",
+    "name": "Perf",
+    "description": "Comprehensive performance analysis and optimization with intelligent profiling and sub-agent coordination",
+    "filePath": "ops/perf/perf.md",
+    "author": "wcygan",
+    "tags": [
+      "ops",
+      "perf"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "ops/project/project-status-deno",
+    "name": "Project Status Deno",
+    "description": "Ultra-fast Deno TypeScript project health check using 8 parallel sub-agents for comprehensive analysis",
+    "filePath": "ops/project/project-status-deno.md",
+    "author": "wcygan",
+    "tags": [
+      "ops",
+      "project"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "ops/project/project-status-go",
+    "name": "Project Status Go",
+    "description": "Ultra-fast Go project health check using 8 parallel sub-agents for comprehensive analysis",
+    "filePath": "ops/project/project-status-go.md",
+    "author": "wcygan",
+    "tags": [
+      "ops",
+      "project"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "ops/project/project-status-java",
+    "name": "Project Status Java",
+    "description": "Ultra-fast Java project health check using 8 parallel sub-agents for comprehensive Gradle/Maven analysis",
+    "filePath": "ops/project/project-status-java.md",
+    "author": "wcygan",
+    "tags": [
+      "ops",
+      "project"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "ops/project/project-status-k8s",
+    "name": "Project Status K8s",
+    "description": "Ultra-fast Kubernetes cluster health check using 8 parallel sub-agents for comprehensive state inspection",
+    "filePath": "ops/project/project-status-k8s.md",
+    "author": "wcygan",
+    "tags": [
+      "ops",
+      "project"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "ops/project/project-status-pnpm",
+    "name": "Project Status Pnpm",
+    "description": "Ultra-fast pnpm TypeScript project health check using 8 parallel sub-agents for comprehensive analysis",
+    "filePath": "ops/project/project-status-pnpm.md",
+    "author": "wcygan",
+    "tags": [
+      "ops",
+      "project"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "ops/project/project-status-rust",
+    "name": "Project Status Rust",
+    "description": "Ultra-fast Rust project health check using 8 parallel sub-agents for comprehensive analysis",
+    "filePath": "ops/project/project-status-rust.md",
+    "author": "wcygan",
+    "tags": [
+      "ops",
+      "project"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "scaffold/deno/scaffold-deno-fresh",
+    "name": "Scaffold Deno Fresh",
+    "description": "Scaffold production-ready Deno Fresh 2.0 application with islands architecture and modern development workflow",
+    "filePath": "scaffold/deno/scaffold-deno-fresh.md",
+    "author": "wcygan",
+    "tags": [
+      "scaffold",
+      "deno"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "scaffold/deno/scaffold-deno-script",
+    "name": "Scaffold Deno Script",
+    "description": "Scaffold production-ready Deno automation script with Dax integration and deno.json task registration",
+    "filePath": "scaffold/deno/scaffold-deno-script.md",
+    "author": "wcygan",
+    "tags": [
+      "scaffold",
+      "deno"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "scaffold/generate-project-claude-settings",
+    "name": "Generate Project Claude Settings",
+    "description": "Generate project-specific .claude/settings.json based on project context with appropriate hooks and configurations",
+    "filePath": "scaffold/generate-project-claude-settings.md",
+    "author": "wcygan",
+    "tags": [
+      "scaffold"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "scaffold/go/scaffold-go-connect",
+    "name": "Scaffold Go Connect",
+    "description": "Scaffold production-ready Go ConnectRPC server with Protocol Buffers and type-safe service definitions",
+    "filePath": "scaffold/go/scaffold-go-connect.md",
+    "author": "wcygan",
+    "tags": [
+      "scaffold",
+      "go"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "scaffold/go/scaffold-go-http-server",
+    "name": "Scaffold Go Http Server",
+    "description": "Scaffold production-ready Go HTTP server with Grafana-inspired patterns and comprehensive best practices",
+    "filePath": "scaffold/go/scaffold-go-http-server.md",
+    "author": "wcygan",
+    "tags": [
+      "scaffold",
+      "go"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "scaffold/java/scaffold-java-quarkus",
+    "name": "Scaffold Java Quarkus",
+    "description": "Scaffold production-ready Java Quarkus project with Spring Boot compatibility layer",
+    "filePath": "scaffold/java/scaffold-java-quarkus.md",
+    "author": "wcygan",
+    "tags": [
+      "scaffold",
+      "java"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "scaffold/rust/scaffold-rust-axum",
+    "name": "Scaffold Rust Axum",
+    "description": "Scaffold production-ready Rust Axum web server with modern async patterns, dependency injection, and comprehensive testing setup",
+    "filePath": "scaffold/rust/scaffold-rust-axum.md",
+    "author": "wcygan",
+    "tags": [
+      "scaffold",
+      "rust"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "scaffold/rust/scaffold-rust-cli",
+    "name": "Scaffold Rust Cli",
+    "description": "Generate production-ready Rust CLI application with modern architecture and comprehensive scaffolding",
+    "filePath": "scaffold/rust/scaffold-rust-cli.md",
+    "author": "wcygan",
+    "tags": [
+      "scaffold",
+      "rust"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "scaffold/scaffold-docusaurus-setup",
+    "name": "Scaffold Docusaurus Setup",
+    "description": "Scaffold a minimal Docusaurus documentation site with TypeScript and diagram support",
+    "filePath": "scaffold/scaffold-docusaurus-setup.md",
+    "author": "wcygan",
+    "tags": [
+      "scaffold"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "security/audit/audit",
+    "name": "Audit",
+    "description": "Comprehensive security audit with parallel analysis using modern tools and sub-agent coordination",
+    "filePath": "security/audit/audit.md",
+    "author": "wcygan",
+    "tags": [
+      "security",
+      "audit"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "security/audit/secrets-audit",
+    "name": "Secrets Audit",
+    "description": "Comprehensive security audit for leaked credentials with parallel analysis and state management",
+    "filePath": "security/audit/secrets-audit.md",
+    "author": "wcygan",
+    "tags": [
+      "security",
+      "audit"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "security/model/harden",
+    "name": "Harden",
+    "description": "Proactive security hardening orchestrator with multi-layer threat mitigation",
+    "filePath": "security/model/harden.md",
+    "author": "wcygan",
+    "tags": [
+      "security",
+      "model"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "security/model/threat-model",
+    "name": "Threat Model",
+    "description": "Generate comprehensive threat models using STRIDE methodology with parallel analysis and session management",
+    "filePath": "security/model/threat-model.md",
+    "author": "wcygan",
+    "tags": [
+      "security",
+      "model"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "task-manager",
+    "name": "Task Manager",
+    "description": "Manage context isolation and focused task execution for complex projects",
+    "filePath": "task-manager.md",
+    "author": "github.com/grahama1970",
+    "tags": [
+      "productivity",
+      "project-management",
+      "tasks",
+      "workflow"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "test-generator",
+    "name": "Test Generator",
+    "description": "Intelligent test case generation for any codebase",
+    "filePath": "test-generator.md",
+    "author": "Testing Team",
+    "tags": [
+      "testing",
+      "automation",
+      "quality"
+    ],
+    "created_at": "2024-01-12T11:00:00Z",
+    "updated_at": "2024-01-19T13:30:00Z"
+  },
+  {
+    "id": "test/analyze/coverage",
+    "name": "Coverage",
+    "description": "Comprehensive code coverage orchestrator with intelligent gap analysis, multi-format reporting, and automated improvement recommendations",
+    "filePath": "test/analyze/coverage.md",
+    "author": "wcygan",
+    "tags": [
+      "test",
+      "analyze"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "test/debug/debug",
+    "name": "Debug",
+    "description": "Systematic debugging orchestrator with multi-language support and intelligent root cause analysis",
+    "filePath": "test/debug/debug.md",
+    "author": "wcygan",
+    "tags": [
+      "test",
+      "debug"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "test/fix/flaky-fix",
+    "name": "Flaky Fix",
+    "description": "Intelligent flaky test detection and stabilization system with automated pattern recognition and framework-specific fixes",
+    "filePath": "test/fix/flaky-fix.md",
+    "author": "wcygan",
+    "tags": [
+      "test",
+      "fix"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "test/generate/integration-test",
+    "name": "Integration Test",
+    "description": "Comprehensive integration testing orchestrator with parallel technology analysis and strategy generation",
+    "filePath": "test/generate/integration-test.md",
+    "author": "wcygan",
+    "tags": [
+      "test",
+      "generate"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "test/generate/test-gen",
+    "name": "Test Gen",
+    "description": "Intelligent test suite generator with framework detection, programmatic structure analysis, and comprehensive test creation",
+    "filePath": "test/generate/test-gen.md",
+    "author": "wcygan",
+    "tags": [
+      "test",
+      "generate"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "test/run/load-test",
+    "name": "Load Test",
+    "description": "Comprehensive load testing orchestrator with intelligent scenario generation, performance baselines, and automated analysis",
+    "filePath": "test/run/load-test.md",
+    "author": "wcygan",
+    "tags": [
+      "test",
+      "run"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "test/run/tdd",
+    "name": "Tdd",
+    "description": "Comprehensive test-driven development orchestrator with language-aware test generation and Red-Green-Refactor workflow automation",
+    "filePath": "test/run/tdd.md",
+    "author": "wcygan",
+    "tags": [
+      "test",
+      "run"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "test/run/validate",
+    "name": "Validate",
+    "description": "Comprehensive validation orchestrator with intelligent project detection, parallel validation execution, and actionable remediation",
+    "filePath": "test/run/validate.md",
+    "author": "wcygan",
+    "tags": [
+      "test",
+      "run"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "tool/cpr",
+    "name": "Cpr",
+    "description": "Create commit, push, and open pull request",
+    "filePath": "tool/cpr.md",
+    "author": "wcygan",
+    "tags": [
+      "tool"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "tool/diagram",
+    "name": "Diagram",
+    "description": "Generate architecture and flow diagrams with ASCII art and Mermaid",
+    "filePath": "tool/diagram.md",
+    "author": "wcygan",
+    "tags": [
+      "tool"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "tool/five",
+    "name": "Five",
+    "description": "Apply five why's root cause analysis to a problem",
+    "filePath": "tool/five.md",
+    "author": "wcygan",
+    "tags": [
+      "tool"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "tool/review",
+    "name": "Review",
+    "description": "Comprehensive code review with context-aware analysis and architectural insights",
+    "filePath": "tool/review.md",
+    "author": "wcygan",
+    "tags": [
+      "tool"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "tool/zed-task",
+    "name": "Zed Task",
+    "description": "Generate optimized Zed task configuration with intelligent defaults",
+    "filePath": "tool/zed-task.md",
+    "author": "wcygan",
+    "tags": [
+      "tool"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "workflow/create/epic",
+    "name": "Epic",
+    "description": "Orchestrates large-scale, cross-repository architectural epics with parallel coordination and dependency management",
+    "filePath": "workflow/create/epic.md",
+    "author": "wcygan",
+    "tags": [
+      "workflow",
+      "create"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "workflow/create/prototype",
+    "name": "Prototype",
+    "description": "Intelligent prototyping orchestrator with technology detection, rapid scaffolding, and validation automation",
+    "filePath": "workflow/create/prototype.md",
+    "author": "wcygan",
+    "tags": [
+      "workflow",
+      "create"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "workflow/manage/clean",
+    "name": "Clean",
+    "description": "Comprehensive technical debt cleanup orchestrator with parallel analysis and safe automation",
+    "filePath": "workflow/manage/clean.md",
+    "author": "wcygan",
+    "tags": [
+      "workflow",
+      "manage"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "workflow/manage/integrate",
+    "name": "Integrate",
+    "description": "Intelligent integration orchestrator for services, APIs, databases, and tools with error handling and monitoring",
+    "filePath": "workflow/manage/integrate.md",
+    "author": "wcygan",
+    "tags": [
+      "workflow",
+      "manage"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "workflow/manage/organize",
+    "name": "Organize",
+    "description": "Intelligent project organization orchestrator with language-specific conventions and parallel analysis",
+    "filePath": "workflow/manage/organize.md",
+    "author": "wcygan",
+    "tags": [
+      "workflow",
+      "manage"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "workflow/manage/plan",
+    "name": "Plan",
+    "description": "Comprehensive project analysis and hierarchical planning orchestrator with integrated task management",
+    "filePath": "workflow/manage/plan.md",
+    "author": "wcygan",
+    "tags": [
+      "workflow",
+      "manage"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "workflow/manage/release",
+    "name": "Release",
+    "description": "Production-ready release orchestrator with semantic versioning, changelog generation, and multi-platform distribution",
+    "filePath": "workflow/manage/release.md",
+    "author": "wcygan",
+    "tags": [
+      "workflow",
+      "manage"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "workflow/manage/sync",
+    "name": "Sync",
+    "description": "Orchestrate multi-editor configuration synchronization with intelligent conflict resolution and rollback capabilities",
+    "filePath": "workflow/manage/sync.md",
+    "author": "wcygan",
+    "tags": [
+      "workflow",
+      "manage"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "workflow/start/start",
+    "name": "Start",
+    "description": "Intelligent workflow orchestration with state management, error recovery, and sub-agent coordination",
+    "filePath": "workflow/start/start.md",
+    "author": "wcygan",
+    "tags": [
+      "workflow",
+      "start"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "workflow/view/next-steps",
+    "name": "Next Steps",
+    "description": "Intelligent project state analyzer with priority-based task recommendations and sub-agent coordination",
+    "filePath": "workflow/view/next-steps.md",
+    "author": "wcygan",
+    "tags": [
+      "workflow",
+      "view"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "workflow/view/options",
+    "name": "Options",
+    "description": "Strategic decision analysis framework with multi-approach evaluation and recommendation scoring",
+    "filePath": "workflow/view/options.md",
+    "author": "wcygan",
+    "tags": [
+      "workflow",
+      "view"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "workflow/view/progress",
+    "name": "Progress",
+    "description": "Development progress tracker with timestamped entries and intelligent organization",
+    "filePath": "workflow/view/progress.md",
+    "author": "wcygan",
+    "tags": [
+      "workflow",
+      "view"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "workflow/view/summary",
+    "name": "Summary",
+    "description": "Generate structured conversation summary with key decisions, action items, and essential code snippets",
+    "filePath": "workflow/view/summary.md",
+    "author": "wcygan",
+    "tags": [
+      "workflow",
+      "view"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "workflow/view/tldr",
+    "name": "Tldr",
+    "description": "Generate concise, actionable TL;DR summaries with progressive disclosure and strategic thinking",
+    "filePath": "workflow/view/tldr.md",
+    "author": "wcygan",
+    "tags": [
+      "workflow",
+      "view"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  }
+]

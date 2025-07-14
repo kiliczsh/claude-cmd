@@ -1,0 +1,55 @@
+{
+  "name": "claude-cmd",
+  "version": "1.0.0",
+  "description": "A comprehensive CLI tool for managing Claude commands, configurations, and workflows.",
+  "main": "dist/index.js",
+  "bin": {
+    "claude-cmd": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "dev": "tsc --watch",
+    "link": "npm link",
+    "prelink": "npm run build",
+    "clean": "rm -rf dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "parse-commands": "ts-node scripts/parse-commands.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kiliczsh/claude-cmd.git"
+  },
+  "homepage": "https://github.com/kiliczsh/claude-cmd#readme",
+  "bugs": {
+    "url": "https://github.com/kiliczsh/claude-cmd/issues"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "claude-cmd",
+    "commands",
+    "cli",
+    "ai",
+    "automation",
+    "mcp",
+    "development"
+  ],
+  "author": "Muhammed Kılıç <kiliczsh@gmail.com> (https://github.com/kiliczsh)",
+  "license": "MIT",
+  "dependencies": {
+    "@inquirer/prompts": "^3.3.0",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.0"
+  },
+  "files": [
+    "dist/**/*",
+    "commands/commands.json",
+    "README.md",
+    "LICENSE"
+  ]
+}

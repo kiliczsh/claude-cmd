@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude CMD - AI-Powered CLI Tool</title>
+    <meta name="description" content="A comprehensive CLI tool for managing Claude commands, configurations, and workflows. Streamline your development process with AI-powered automation.">
+    <meta name="keywords" content="Claude, AI, CLI, development tools, automation, commands, workflow">
+    <meta name="author" content="Claude CMD">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <span class="theme-icon">☀️</span>
+    </button>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Claude CMD</h1>
+            <p class="hero-subtitle">A comprehensive CLI tool for managing Claude commands, configurations, and workflows. Streamline your development process with AI-powered automation.</p>
+            <div class="hero-actions">
+                <a href="#commands" class="btn btn-primary">Explore Commands</a>
+                <a href="https://github.com/kiliczsh/claude-cmd" class="btn btn-secondary" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+            <!-- <div class="hero-badges">
+                <a href="https://github.com/kiliczsh/claude-cmd" target="_blank" rel="noopener">
+                    <img src="https://img.shields.io/github/stars/kiliczsh/claude-cmd?style=for-the-badge&color=CC785C" alt="GitHub Stars" class="github-badge">
+                </a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Installation Section -->
+    <section class="installation" id="installation">
+        <div class="container">
+            <h2 class="section-title">Installation</h2>
+            <div class="install-card">
+                <code class="install-command">npm install -g claude-cmd</code>
+                <button class="copy-btn" onclick="copyToClipboard('npm install -g claude-cmd')">Copy</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commands Section -->
+    <section class="commands" id="commands">
+        <div class="container">
+            <div class="commands-header">
+                <h2 class="section-title">Available Commands</h2>
+                <div class="commands-controls">
+                    <div class="search-box">
+                        <input type="text" id="command-search" placeholder="Search commands..." aria-label="Search commands" />
+                        <span class="search-icon">🔍</span>
+                    </div>
+                    <div class="view-toggle">
+                        <button id="list-view" class="view-btn active" aria-label="List view">☰</button>
+                        <button id="grid-view" class="view-btn" aria-label="Grid view">⊞</button>
+                    </div>
+                </div>
+            </div>
+            <div class="commands-filter">
+                <div class="filter-tags" id="filter-tags">
+                    <button class="tag-filter active" data-tag="all">All</button>
+                </div>
+            </div>
+            <div class="commands-container" id="commands-container">
+                <div class="loading">Loading commands...</div>
+            </div>
+            <div class="commands-stats">
+                <span id="commands-count">Loading commands...</span>
+            </div>
+            <div class="pagination-container">
+                <div id="pagination-controls"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="use-cases" id="use-cases">
+        <div class="container">
+            <h2 class="section-title">Built for Teams</h2>
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="use-case-icon">👨‍💻</div>
+                    <h3>Developers</h3>
+                    <p>Automate code analysis, generate comprehensive documentation, create robust tests, and streamline development workflows with AI-powered commands.</p>
+                    <ul>
+                        <li>Intelligent code refactoring and optimization</li>
+                        <li>Automated testing and comprehensive validation</li>
+                        <li>Smart documentation generation</li>
+                        <li>Dependency analysis and management</li>
+                    </ul>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">👩‍💼</div>
+                    <h3>Project Managers</h3>
+                    <p>Track project progress, generate detailed reports, and coordinate team workflows with comprehensive project management and planning tools.</p>
+                    <ul>
+                        <li>Real-time project status monitoring</li>
+                        <li>Team coordination and resource planning</li>
+                        <li>Automated release management</li>
+                        <li>Progress tracking and reporting</li>
+                    </ul>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">⚙️</div>
+                    <h3>DevOps Engineers</h3>
+                    <p>Automate infrastructure management, streamline deployment pipelines, and enhance monitoring with powerful DevOps-focused commands and tools.</p>
+                    <ul>
+                        <li>Infrastructure as Code automation</li>
+                        <li>Advanced CI/CD pipeline management</li>
+                        <li>Comprehensive monitoring and observability</li>
+                        <li>Container orchestration and deployment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" data-faq="1">
+                        <span>How do I install Claude CMD?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" data-faq="1">
+                        <p>You can install Claude CMD via npm: <code>npm install -g claude-command</code>. Alternatively, clone the repository from GitHub and build from source for the latest features.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-faq="2">
+                        <span>What are the system requirements?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" data-faq="2">
+                        <p>Claude CMD requires Node.js 16 or higher and works seamlessly on Windows, macOS, and Linux. It's built with TypeScript for maximum cross-platform compatibility and performance.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-faq="3">
+                        <span>Can I create custom commands?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" data-faq="3">
+                        <p>Absolutely! Claude CMD is highly extensible. You can create custom commands using our comprehensive template system and add them to your local command library with full TypeScript support.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-faq="4">
+                        <span>Is it free to use?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" data-faq="4">
+                        <p>Yes, Claude CMD is completely open source and free to use under the MIT license. You can use it for personal projects, commercial applications, and enterprise deployments.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-faq="5">
+                        <span>How do I get support?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" data-faq="5">
+                        <p>Get support through GitHub issues, comprehensive documentation, or join our community discussions. We're committed to helping you succeed with Claude CMD.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Claude CMD</h3>
+                    <p>AI-powered CLI tool designed for modern development teams. Streamline your workflow with intelligent automation.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://github.com/kiliczsh/claude-cmd" target="_blank" rel="noopener">GitHub Repository</a></li>
+                        <li><a href="https://github.com/kiliczsh/claude-cmd/blob/main/README.md" target="_blank" rel="noopener">Documentation</a></li>
+                        <li><a href="https://github.com/kiliczsh/claude-cmd/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="https://github.com/kiliczsh/claude-cmd/issues" target="_blank" rel="noopener">Report Issues</a></li>
+                        <li><a href="https://github.com/kiliczsh/claude-cmd/discussions" target="_blank" rel="noopener">Discussions</a></li>
+                        <li><a href="https://github.com/kiliczsh" target="_blank" rel="noopener">Author Profile</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="https://github.com/kiliczsh/claude-cmd/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a></li>
+                        <li><a href="#" onclick="showPrivacyPolicy()">Privacy Policy</a></li>
+                        <li><a href="#" onclick="showTermsOfService()">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Claude CMD. Created by <a href="https://github.com/kiliczsh" target="_blank" rel="noopener">kiliczsh</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Command Detail Modal -->
+    <div id="command-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-command-name"></h2>
+                <button class="modal-close" onclick="closeCommandModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="command-detail-meta">
+                    <span id="modal-command-category" class="command-category"></span>
+                    <span id="modal-command-author" class="command-author-detail"></span>
+                </div>
+                <p id="modal-command-description" class="command-description-detail"></p>
+                <div id="modal-command-tags" class="command-tags-detail"></div>
+                <div class="command-actions">
+                    <button class="btn btn-primary" onclick="copyCommandId()">Copy Command ID</button>
+                    <a id="modal-github-link" class="btn btn-secondary" target="_blank" rel="noopener">View on GitHub</a>
+                </div>
+                <div class="command-dates">
+                    <div class="date-item">
+                        <span class="date-label">Created:</span>
+                        <span id="modal-created-date"></span>
+                    </div>
+                    <div class="date-item">
+                        <span class="date-label">Updated:</span>
+                        <span id="modal-updated-date"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
