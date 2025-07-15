@@ -1467,6 +1467,21 @@
     "updated_at": "2025-07-14T00:00:00Z"
   },
   {
+    "id": "lyra",
+    "name": "Lyra",
+    "description": "AI prompt optimization specialist that transforms vague requests into precision-crafted prompts",
+    "filePath": "lyra.md",
+    "author": "CharlyWargnier",
+    "tags": [
+      "ai",
+      "prompt-engineering",
+      "optimization",
+      "productivity"
+    ],
+    "created_at": "2025-01-15T00:00:00Z",
+    "updated_at": "2025-01-15T00:00:00Z"
+  },
+  {
     "id": "meta/command/generate-command",
     "name": "Generate Command",
     "description": "Intelligent slash command generator with parallel analysis and gold standard best practices",
