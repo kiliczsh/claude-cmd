@@ -136,7 +136,7 @@ If you encounter any issues or have questions, please:
 
 **Muhammed Kılıç** (@kiliczsh)
 - GitHub: [kiliczsh](https://github.com/kiliczsh)
-- Email: kiliczsh@gmail.com
+- Email: hi@muhammedkilic.com
 
 ---
 
