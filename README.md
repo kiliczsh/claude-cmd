@@ -1,3 +1,5 @@
+<img width="679" height="477" alt="image" src="https://github.com/user-attachments/assets/d43919bf-be4f-49ee-b701-a3d7e3d53715" />
+
 # claude-cmd
 
 A lightweight (~46kB) and comprehensive CLI tool for managing Claude commands, configurations, and workflows. This tool helps you organize and manage custom commands for Claude AI, create project-specific configurations, and handle MCP (Model Context Protocol) servers.
