@@ -1207,22 +1207,6 @@
     "updated_at": "2025-07-14T00:00:00Z"
   },
   {
-    "id": "directory-cleanup",
-    "name": "Directory Cleanup",
-    "description": "Organize and restructure project directories following framework best practices",
-    "filePath": "directory-cleanup.md",
-    "author": "github.com/kingler",
-    "tags": [
-      "organization",
-      "cleanup",
-      "structure",
-      "refactoring",
-      "maintenance"
-    ],
-    "created_at": "2025-07-14T00:00:00Z",
-    "updated_at": "2025-07-14T00:00:00Z"
-  },
-  {
     "id": "docs/analyze/explain",
     "name": "Explain",
     "description": "Ultra-fast parallel technical explanations using 10 sub-agents for comprehensive multi-angle analysis",
@@ -1465,21 +1449,6 @@
     ],
     "created_at": "2025-07-14T00:00:00Z",
     "updated_at": "2025-07-14T00:00:00Z"
-  },
-  {
-    "id": "lyra",
-    "name": "Lyra",
-    "description": "AI prompt optimization specialist that transforms vague requests into precision-crafted prompts",
-    "filePath": "lyra.md",
-    "author": "CharlyWargnier",
-    "tags": [
-      "ai",
-      "prompt-engineering",
-      "optimization",
-      "productivity"
-    ],
-    "created_at": "2025-01-15T00:00:00Z",
-    "updated_at": "2025-01-15T00:00:00Z"
   },
   {
     "id": "meta/command/generate-command",
@@ -1781,6 +1750,66 @@
     "updated_at": "2025-07-14T00:00:00Z"
   },
   {
+    "id": "other/directory-cleanup",
+    "name": "Directory Cleanup",
+    "description": "Organize and restructure project directories following framework best practices",
+    "filePath": "other/directory-cleanup.md",
+    "author": "github.com/kingler",
+    "tags": [
+      "organization",
+      "cleanup",
+      "structure",
+      "refactoring",
+      "maintenance"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "other/lyra",
+    "name": "Lyra",
+    "description": "AI prompt optimization specialist that transforms vague requests into precision-crafted prompts",
+    "filePath": "other/lyra.md",
+    "author": "CharlyWargnier",
+    "tags": [
+      "ai",
+      "prompt-engineering",
+      "optimization",
+      "productivity"
+    ],
+    "created_at": "2025-01-15T00:00:00Z",
+    "updated_at": "2025-01-15T00:00:00Z"
+  },
+  {
+    "id": "other/task-manager",
+    "name": "Task Manager",
+    "description": "Manage context isolation and focused task execution for complex projects",
+    "filePath": "other/task-manager.md",
+    "author": "github.com/grahama1970",
+    "tags": [
+      "productivity",
+      "project-management",
+      "tasks",
+      "workflow"
+    ],
+    "created_at": "2025-07-14T00:00:00Z",
+    "updated_at": "2025-07-14T00:00:00Z"
+  },
+  {
+    "id": "other/test-generator",
+    "name": "Test Generator",
+    "description": "Intelligent test case generation for any codebase",
+    "filePath": "other/test-generator.md",
+    "author": "Testing Team",
+    "tags": [
+      "testing",
+      "automation",
+      "quality"
+    ],
+    "created_at": "2024-01-12T11:00:00Z",
+    "updated_at": "2024-01-19T13:30:00Z"
+  },
+  {
     "id": "scaffold/deno/scaffold-deno-fresh",
     "name": "Scaffold Deno Fresh",
     "description": "Scaffold production-ready Deno Fresh 2.0 application with islands architecture and modern development workflow",
@@ -1946,35 +1975,6 @@
     ],
     "created_at": "2025-07-14T00:00:00Z",
     "updated_at": "2025-07-14T00:00:00Z"
-  },
-  {
-    "id": "task-manager",
-    "name": "Task Manager",
-    "description": "Manage context isolation and focused task execution for complex projects",
-    "filePath": "task-manager.md",
-    "author": "github.com/grahama1970",
-    "tags": [
-      "productivity",
-      "project-management",
-      "tasks",
-      "workflow"
-    ],
-    "created_at": "2025-07-14T00:00:00Z",
-    "updated_at": "2025-07-14T00:00:00Z"
-  },
-  {
-    "id": "test-generator",
-    "name": "Test Generator",
-    "description": "Intelligent test case generation for any codebase",
-    "filePath": "test-generator.md",
-    "author": "Testing Team",
-    "tags": [
-      "testing",
-      "automation",
-      "quality"
-    ],
-    "created_at": "2024-01-12T11:00:00Z",
-    "updated_at": "2024-01-19T13:30:00Z"
   },
   {
     "id": "test/analyze/coverage",
