@@ -391,7 +391,7 @@ You should receive a response like this:
 {
   "id": "user_123",
   "email": "test@example.com",
-  "createdAt": "2024-01-15T10:30:00Z"
+  "createdAt": "2025-07-15T10:30:00Z"
 }
 ```
 
