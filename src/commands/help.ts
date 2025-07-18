@@ -1,23 +1,33 @@
-import { input, select } from '@inquirer/prompts';
 import { colorize } from '../utils/colors';
 import { HelpAction } from '@/types';
+import { MenuNavigator, NavigationUtils } from '../utils/navigation';
 
 export class HelpManager {
+  private navigator: MenuNavigator;
+  
+  constructor() {
+    this.navigator = new MenuNavigator();
+  }
+  
   async showHelp(): Promise<void> {
-    console.log(`\n${colorize.highlight('📚 Help & Documentation')}`);
+    this.navigator.enterMenu('Help & Documentation');
     
-    const action = await select<HelpAction>({
-      message: 'What would you like to learn about?',
-      choices: [
-        { name: '📖 General Help & Overview', value: 'overview' },
-        { name: '🚀 Quick Start Guide', value: 'quickstart' },
-        { name: '📁 File Locations & Structure', value: 'files' },
-        { name: '⌨️ Command Line Usage', value: 'cli' },
-        { name: '🔙 Back to main menu', value: 'back' }
-      ]
-    });
+    while (true) {
+      console.log(`\n${colorize.highlight('📚 Help & Documentation')}`);
+      
+      const action = await NavigationUtils.enhancedSelect<HelpAction>({
+        message: 'What would you like to learn about?',
+        choices: [
+          { name: '📖 General Help & Overview', value: 'overview' },
+          { name: '🚀 Quick Start Guide', value: 'quickstart' },
+          { name: '📁 File Locations & Structure', value: 'files' },
+          { name: '⌨️ Command Line Usage', value: 'cli' },
+          { name: this.navigator.getBackButtonText(), value: 'back' }
+        ],
+        allowEscBack: true
+      });
 
-    switch (action) {
+      switch (action) {
       case 'overview':
         console.log(`${colorize.highlight('\n📖 Claude CMD v1.0 Overview')}`);
         console.log(`
@@ -118,10 +128,12 @@ ${colorize.bold('Tips:')}
 • Check command IDs with 'list' before installing
 `);
         break;
-    }
-    
-    if (action !== 'back') {
-      await input({ message: 'Press Enter to continue...' });
+        case 'back':
+          this.navigator.exitMenu();
+          return;
+      }
+      
+      await this.navigator.pauseForUser();
     }
   }
 } 

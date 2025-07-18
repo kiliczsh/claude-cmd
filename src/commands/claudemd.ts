@@ -3,6 +3,7 @@ import * as path from 'path';
 import { colorize } from '../utils/colors';
 import { FileSystemManager } from '../core/filesystem';
 import { ClaudeMdAction } from '@/types';
+import { MenuNavigator, NavigationUtils } from '../utils/navigation';
 
 type ProjectType = 'nodejs' | 'react' | 'vue' | 'python' | 'go' | 'rust' | 'java' | 'dotnet' | 'generic';
 type LocationType = 'current' | 'local' | 'home';
@@ -18,7 +19,11 @@ interface LocationChoice {
 }
 
 export class ClaudeMdManager {
-  constructor(private fs: FileSystemManager) {}
+  private navigator: MenuNavigator;
+  
+  constructor(private fs: FileSystemManager) {
+    this.navigator = new MenuNavigator();
+  }
 
   async createClaudeMd(projectType: ProjectType | null = null): Promise<string> {
     console.log(`\n${colorize.highlight('🎯 CLAUDE.md Configuration Setup')}`);
@@ -59,10 +64,10 @@ export class ClaudeMdManager {
     const filePath = this.getFilePath(location);
     if (this.fs.fileExists(filePath)) {
       console.log(colorize.warning(`⚠️  File already exists: ${filePath}`));
-      const shouldOverwrite = await confirm({
-        message: 'Do you want to overwrite the existing file?',
-        default: false
-      });
+      const shouldOverwrite = await NavigationUtils.confirmAction(
+        'Do you want to overwrite the existing file?',
+        false
+      );
       
       if (!shouldOverwrite) {
         console.log(colorize.info('Operation cancelled.'));
@@ -103,10 +108,10 @@ export class ClaudeMdManager {
     
     if (claudeMdFiles.length === 0) {
       console.log(colorize.warning('No CLAUDE.md files found'));
-      const create = await confirm({
-        message: 'Would you like to create a new CLAUDE.md file?',
-        default: true
-      });
+      const create = await NavigationUtils.confirmAction(
+        'Would you like to create a new CLAUDE.md file?',
+        true
+      );
       
       if (create) {
         await this.createClaudeMd();
@@ -470,40 +475,46 @@ export class ClaudeMdManager {
   }
 
   async handleClaudeMdMenu(): Promise<void> {
-    const action = await select<ClaudeMdAction>({
-      message: 'CLAUDE.md Management:',
-      choices: [
-        { name: '📄 Create new CLAUDE.md', value: 'create' },
-        { name: '✏️  Edit existing CLAUDE.md', value: 'edit' },
-        { name: '🔍 Validate CLAUDE.md files', value: 'validate' },
-        { name: '📋 List all CLAUDE.md files', value: 'list' },
-        { name: '← Back to main menu', value: 'back' }
-      ]
-    });
+    this.navigator.enterMenu('CLAUDE.md Management');
+    
+    while (true) {
+      const action = await NavigationUtils.enhancedSelect<ClaudeMdAction>({
+        message: 'CLAUDE.md Management:',
+        choices: [
+          { name: '📄 Create new CLAUDE.md', value: 'create' },
+          { name: '✏️  Edit existing CLAUDE.md', value: 'edit' },
+          { name: '🔍 Validate CLAUDE.md files', value: 'validate' },
+          { name: '📋 List all CLAUDE.md files', value: 'list' },
+          { name: this.navigator.getBackButtonText(), value: 'back' }
+        ],
+        allowEscBack: true
+      });
 
-    switch (action) {
-      case 'create':
-        await this.createClaudeMd();
-        break;
-      case 'edit':
-        await this.editClaudeMd();
-        break;
-      case 'validate':
-        await this.validateClaudeMd();
-        break;
-      case 'list':
-        const files = this.fs.findClaudeMdFiles();
-        if (files.length === 0) {
-          console.log(colorize.warning('No CLAUDE.md files found'));
-        } else {
-          console.log(`\n${colorize.highlight('📋 CLAUDE.md Files:')}`);
-          files.forEach((file, index) => {
-            console.log(`${colorize.success(`${index + 1}.`)} ${this.getDisplayName(file)}`);
-          });
-        }
-        break;
-      case 'back':
-        return;
+      switch (action) {
+        case 'create':
+          await this.createClaudeMd();
+          break;
+        case 'edit':
+          await this.editClaudeMd();
+          break;
+        case 'validate':
+          await this.validateClaudeMd();
+          break;
+        case 'list':
+          const files = this.fs.findClaudeMdFiles();
+          if (files.length === 0) {
+            console.log(colorize.warning('No CLAUDE.md files found'));
+          } else {
+            console.log(`\n${colorize.highlight('📋 CLAUDE.md Files:')}`);
+            files.forEach((file, index) => {
+              console.log(`${colorize.success(`${index + 1}.`)} ${this.getDisplayName(file)}`);
+            });
+          }
+          break;
+        case 'back':
+          this.navigator.exitMenu();
+          return;
+      }
     }
   }
 

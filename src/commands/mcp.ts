@@ -1,5 +1,6 @@
 import { colorize } from '../utils/colors';
 import { FileSystemManager } from '../core/filesystem';
+import { MenuNavigator, NavigationUtils } from '../utils/navigation';
 import * as path from 'path';
 import * as os from 'os';
 
@@ -16,11 +17,40 @@ interface MCPConfig {
 }
 
 export class MCPManager {
-  constructor(private fs: FileSystemManager) {}
+  private navigator: MenuNavigator;
+  
+  constructor(private fs: FileSystemManager) {
+    this.navigator = new MenuNavigator();
+  }
 
   async handleMCPMenu(): Promise<void> {
-    console.log(`\n${colorize.highlight('☁️ Local MCP Servers')}`);
+    this.navigator.enterMenu('MCP Servers');
     
+    while (true) {
+      console.log(`\n${colorize.highlight('☁️ Local MCP Servers')}`);
+      
+      const action = await NavigationUtils.enhancedSelect<'view' | 'back'>({
+        message: 'What would you like to do?',
+        choices: [
+          { name: '📋 View MCP servers', value: 'view' },
+          { name: this.navigator.getBackButtonText(), value: 'back' }
+        ],
+        allowEscBack: true
+      });
+
+      switch (action) {
+        case 'view':
+          await this.showMCPServers();
+          await this.navigator.pauseForUser();
+          break;
+        case 'back':
+          this.navigator.exitMenu();
+          return;
+      }
+    }
+  }
+
+  private async showMCPServers(): Promise<void> {
     try {
       const mcpServers = this.getLocalMCPServers();
       

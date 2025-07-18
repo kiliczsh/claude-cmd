@@ -1,4 +1,3 @@
-import { input, select } from '@inquirer/prompts';
 import { colorize, emoji } from './utils/colors';
 import { FileSystemManager } from './core/filesystem';
 import { ClaudeCommandAPI } from './core/api';
@@ -11,6 +10,7 @@ import { SettingsManager } from './commands/settings';
 import { HelpManager } from './commands/help';
 import { ProjectManager } from './commands/project';
 import { MenuAction, MenuChoice } from '@/types';
+import { globalNavigator, NavigationUtils } from './utils/navigation';
 
 export class ClaudeCommandCLI {
   private fs: FileSystemManager;
@@ -54,8 +54,16 @@ export class ClaudeCommandCLI {
   }
 
   async mainMenu(): Promise<void> {
+    // Reset navigation to ensure we start fresh
+    globalNavigator.resetNavigation();
+    
     while (true) {
-      const action = await select<MenuAction>({
+      // Show breadcrumb if we're in a submenu context
+      if (globalNavigator.getCurrentPath().length > 0) {
+        globalNavigator.displayBreadcrumb();
+      }
+      
+      const action = await NavigationUtils.enhancedSelect<MenuAction>({
         message: 'What would you like to do?',
         choices: [
           { name: `${emoji.list} List installed commands`, value: 'list' },
@@ -74,7 +82,8 @@ export class ClaudeCommandCLI {
           { name: `${emoji.help} Help & Documentation`, value: 'help' },
           { name: `${emoji.exit} Exit`, value: 'exit' }
         ] as MenuChoice[],
-        pageSize: 15
+        pageSize: 15,
+        allowEscBack: false  // Main menu doesn't need ESC back
       });
 
       console.log(''); // Add spacing
@@ -83,6 +92,7 @@ export class ClaudeCommandCLI {
         switch (action) {
           case 'list':
             await this.commandManager.listInstalledCommands();
+            await globalNavigator.pauseForUser();
             break;
             
           case 'search':
@@ -91,10 +101,12 @@ export class ClaudeCommandCLI {
             
           case 'install':
             await this.commandManager.installCommand();
+            await globalNavigator.pauseForUser();
             break;
             
           case 'delete':
             await this.commandManager.deleteCommand();
+            await globalNavigator.pauseForUser();
             break;
             
           case 'claudemd':
@@ -103,6 +115,7 @@ export class ClaudeCommandCLI {
             
           case 'init':
             await this.projectManager.initializeProject();
+            await globalNavigator.pauseForUser();
             break;
             
           case 'permissions':
@@ -139,15 +152,12 @@ export class ClaudeCommandCLI {
         }
       } catch (error) {
         console.log(colorize.error(`An error occurred: ${(error as Error).message}`));
+        await globalNavigator.pauseForUser();
       }
 
-      // Only pause if we actually performed an action
+      // Clear screen and show welcome again for navigation
       if (!action.startsWith('---') && action !== '') {
-        // Pause before showing menu again
-        await input({ message: 'Press Enter to continue...' });
-        
-        console.clear();
-        this.showWelcome();
+        NavigationUtils.clearScreenWithWelcome(() => this.showWelcome());
       }
     }
   }

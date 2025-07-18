@@ -3,6 +3,7 @@ import { colorize } from '../utils/colors';
 import { FileSystemManager } from '../core/filesystem';
 import { ClaudeCommandAPI } from '../core/api';
 import { Command } from '@/types';
+import { NavigationUtils } from '../utils/navigation';
 
 export class CommandManager {
   constructor(
@@ -272,16 +273,19 @@ export class CommandManager {
       value: cmd.id
     }));
 
-    choices.push({ name: '← Back to main menu', value: 'back' });
+    choices.push({ name: '← Back', value: 'back' });
+    choices.push({ name: '← Cancel', value: 'cancel' });
 
     const selectedCommand = await select<string>({
       message: '📦 Select a command to install:',
       choices: choices
     });
 
-    if (selectedCommand !== 'back') {
+    if (selectedCommand !== 'back' && selectedCommand !== 'cancel') {
       const targetLocation = await this.selectInstallLocation();
-      await this.installSpecificCommand(selectedCommand, targetLocation);
+      if (targetLocation !== null) {
+        await this.installSpecificCommand(selectedCommand, targetLocation);
+      }
     }
   }
 
@@ -292,17 +296,26 @@ export class CommandManager {
     });
 
     const targetLocation = await this.selectInstallLocation();
-    await this.installSpecificCommand(command.trim(), targetLocation);
+    if (targetLocation !== null) {
+      await this.installSpecificCommand(command.trim(), targetLocation);
+    }
   }
 
-  private async selectInstallLocation(): Promise<'global' | 'local'> {
-    const location = await select<'global' | 'local'>({
+  private async selectInstallLocation(): Promise<'global' | 'local' | null> {
+    const location = await NavigationUtils.enhancedSelect<'global' | 'local' | 'back' | 'cancel'>({
       message: '📁 Select installation location:',
       choices: [
         { name: '🏠 Global (~/.claude/commands)', value: 'global' },
-        { name: '📂 Project local (./.claude/commands)', value: 'local' }
-      ]
+        { name: '📂 Project local (./.claude/commands)', value: 'local' },
+        { name: '← Back', value: 'back' },
+        { name: '← Cancel', value: 'cancel' }
+      ],
+      allowEscBack: true
     });
+
+    if (location === 'back' || location === 'cancel') {
+      return null;
+    }
 
     return location;
   }
@@ -383,10 +396,10 @@ export class CommandManager {
       return;
     }
 
-    const confirmDelete = await confirm({
-      message: `Are you sure you want to delete '${selectedFile}'?`,
-      default: false
-    });
+    const confirmDelete = await NavigationUtils.confirmAction(
+      `Are you sure you want to delete '${selectedFile}'?`,
+      false
+    );
 
     if (confirmDelete) {
       try {

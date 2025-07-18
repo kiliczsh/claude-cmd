@@ -1,36 +1,46 @@
-import { input, select } from '@inquirer/prompts';
+import { select } from '@inquirer/prompts';
 import { colorize } from '../utils/colors';
 import { FileSystemManager } from '../core/filesystem';
 import { SecurityProfile, PermissionsAction } from '@/types';
+import { MenuNavigator, NavigationUtils } from '../utils/navigation';
 
 export class PermissionsManager {
-  constructor(private fs: FileSystemManager) {}
+  private navigator: MenuNavigator;
+  
+  constructor(private fs: FileSystemManager) {
+    this.navigator = new MenuNavigator();
+  }
 
   async handlePermissions(): Promise<void> {
-    console.log(`\n${colorize.highlight('🔒 Permissions & Security Management')}`);
+    this.navigator.enterMenu('Permissions & Security');
     
-    const action = await select<PermissionsAction>({
-      message: 'What would you like to do?',
-      choices: [
-        { name: '⚙️ Current security status', value: 'status' },
-        { name: '📖 Security best practices', value: 'practices' },
-        { name: '🔙 Back to main menu', value: 'back' }
-      ]
-    });
+    while (true) {
+      console.log(`\n${colorize.highlight('🔒 Permissions & Security Management')}`);
+      
+      const action = await NavigationUtils.enhancedSelect<PermissionsAction>({
+        message: 'What would you like to do?',
+        choices: [
+          { name: '⚙️ Current security status', value: 'status' },
+          { name: '📖 Security best practices', value: 'practices' },
+          { name: this.navigator.getBackButtonText(), value: 'back' }
+        ],
+        allowEscBack: true
+      });
 
-    switch (action) {
-      case 'status':
-        const config = this.fs.getClaudeConfig();
-        console.log(`${colorize.highlight('\n🛡️ Current Security Status:')}`);
-        console.log(`Security Profile: ${config.securityProfile || colorize.warning('Not configured')}`);
-        console.log(`Allowed Tools: ${config.allowedTools?.length || 0} tools configured`);
-        console.log(`Last Updated: ${config.lastUpdated || 'Never'}`);
-        console.log(`\n${colorize.info('💡 Run Project Initialization to set up basic security')}`);
-        break;
-        
-      case 'practices':
-        console.log(`${colorize.highlight('\n📚 Security Best Practices:')}`);
-        console.log(`
+      switch (action) {
+        case 'status':
+          const config = this.fs.getClaudeConfig();
+          console.log(`${colorize.highlight('\n🛡️ Current Security Status:')}`);
+          console.log(`Security Profile: ${config.securityProfile || colorize.warning('Not configured')}`);
+          console.log(`Allowed Tools: ${config.allowedTools?.length || 0} tools configured`);
+          console.log(`Last Updated: ${config.lastUpdated || 'Never'}`);
+          console.log(`\n${colorize.info('💡 Run Project Initialization to set up basic security')}`);
+          await this.navigator.pauseForUser();
+          break;
+          
+        case 'practices':
+          console.log(`${colorize.highlight('\n📚 Security Best Practices:')}`);
+          console.log(`
 ${colorize.bold('1. Use Security Profiles:')}
    • Start with 'strict' for sensitive projects
    • Gradually allow more tools as needed
@@ -47,11 +57,13 @@ ${colorize.bold('4. Team Coordination:')}
    • Share security configs with team
    • Document security decisions
 `);
-        break;
-    }
-    
-    if (action !== 'back') {
-      await input({ message: 'Press Enter to continue...' });
+          await this.navigator.pauseForUser();
+          break;
+          
+        case 'back':
+          this.navigator.exitMenu();
+          return;
+      }
     }
   }
 

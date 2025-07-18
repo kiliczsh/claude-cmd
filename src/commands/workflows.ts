@@ -1,21 +1,31 @@
-import { input, select } from '@inquirer/prompts';
 import { colorize } from '../utils/colors';
 import { WorkflowAction } from '@/types';
+import { MenuNavigator, NavigationUtils } from '../utils/navigation';
 
 export class WorkflowManager {
+  private navigator: MenuNavigator;
+  
+  constructor() {
+    this.navigator = new MenuNavigator();
+  }
+  
   async handleWorkflows(): Promise<void> {
-    console.log(`\n${colorize.highlight('🔄 Command & Workflow Creation')}`);
+    this.navigator.enterMenu('Command & Workflow Creation');
     
-    const action = await select<WorkflowAction>({
-      message: 'What would you like to learn about?',
-      choices: [
-        { name: '📋 Command creation guide', value: 'templates' },
-        { name: '📖 Best practices', value: 'practices' },
-        { name: '🔙 Back to main menu', value: 'back' }
-      ]
-    });
+    while (true) {
+      console.log(`\n${colorize.highlight('🔄 Command & Workflow Creation')}`);
+      
+      const action = await NavigationUtils.enhancedSelect<WorkflowAction>({
+        message: 'What would you like to learn about?',
+        choices: [
+          { name: '📋 Command creation guide', value: 'templates' },
+          { name: '📖 Best practices', value: 'practices' },
+          { name: this.navigator.getBackButtonText(), value: 'back' }
+        ],
+        allowEscBack: true
+      });
 
-    switch (action) {
+      switch (action) {
       case 'templates':
         console.log(`${colorize.highlight('\n📋 Creating Custom Commands:')}`);
         console.log(`
@@ -80,10 +90,12 @@ ${colorize.bold('4. Documentation:')}
    • Add author and version information
 `);
         break;
-    }
-    
-    if (action !== 'back') {
-      await input({ message: 'Press Enter to continue...' });
+        case 'back':
+          this.navigator.exitMenu();
+          return;
+      }
+      
+      await this.navigator.pauseForUser();
     }
   }
 } 

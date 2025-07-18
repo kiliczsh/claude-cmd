@@ -1,31 +1,39 @@
-import { input, select } from '@inquirer/prompts';
 import { colorize } from '../utils/colors';
 import { FileSystemManager } from '../core/filesystem';
 import { SettingsAction } from '@/types';
+import { MenuNavigator, NavigationUtils } from '../utils/navigation';
 
 export class SettingsManager {
-  constructor(private fs: FileSystemManager) {}
+  private navigator: MenuNavigator;
+  
+  constructor(private fs: FileSystemManager) {
+    this.navigator = new MenuNavigator();
+  }
 
   async handleSettings(): Promise<void> {
-    console.log(`\n${colorize.highlight('⚙️ Settings & Configuration')}`);
+    this.navigator.enterMenu('Settings');
     
-    const action = await select<SettingsAction>({
-      message: 'What would you like to do?',
-      choices: [
-        { name: '📋 View current settings', value: 'view' },
-        { name: '🔙 Back to main menu', value: 'back' }
-      ]
-    });
+    while (true) {
+      console.log(`\n${colorize.highlight('⚙️ Settings & Configuration')}`);
+      
+      const action = await NavigationUtils.enhancedSelect<SettingsAction>({
+        message: 'What would you like to do?',
+        choices: [
+          { name: '📋 View current settings', value: 'view' },
+          { name: this.navigator.getBackButtonText(), value: 'back' }
+        ],
+        allowEscBack: true
+      });
 
-    switch (action) {
-      case 'view':
-        const config = this.fs.getClaudeConfig();
-        const envOverride = process.env.CLAUDE_CMD_URL;
-        const defaultUrl = 'https://raw.githubusercontent.com/kiliczsh/claude-cmd/main/commands/commands.json';
-        const effectiveSource = envOverride || defaultUrl;
-        
-        console.log(`\n${colorize.highlight('📋 Current Settings:')}`);
-        console.log(`
+      switch (action) {
+        case 'view':
+          const config = this.fs.getClaudeConfig();
+          const envOverride = process.env.CLAUDE_CMD_URL;
+          const defaultUrl = 'https://raw.githubusercontent.com/kiliczsh/claude-cmd/main/commands/commands.json';
+          const effectiveSource = envOverride || defaultUrl;
+          
+          console.log(`\n${colorize.highlight('📋 Current Settings:')}`);
+          console.log(`
 ${colorize.bold('General:')}
 • Version: ${config.version || 'unknown'}
 • Last Updated: ${config.lastUpdated || 'never'}
@@ -51,12 +59,13 @@ ${colorize.bold('Manual Configuration:')}
 • Reset all settings: Delete ~/.claude/settings.json
 • Backup settings: Copy ~/.claude/ directory
 `);
-        break;
-        
-    }
-    
-    if (action !== 'back' && action !== 'view') {
-      await input({ message: 'Press Enter to continue...' });
+          await this.navigator.pauseForUser();
+          break;
+          
+        case 'back':
+          this.navigator.exitMenu();
+          return;
+      }
     }
   }
 
