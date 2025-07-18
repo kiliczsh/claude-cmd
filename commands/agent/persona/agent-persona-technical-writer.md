@@ -344,7 +344,7 @@ Requires API key in `Authorization` header: `Bearer YOUR_API_KEY`
     "firstName": "John",
     "lastName": "Doe"
   },
-  "createdAt": "2024-01-15T10:30:00Z"
+  "createdAt": "2025-07-15T10:30:00Z"
 }
 ```
 

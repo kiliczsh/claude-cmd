@@ -427,7 +427,7 @@ pub struct ApiDoc;
     "id": "123e4567-e89b-12d3-a456-426614174000",
     "email": "user@example.com",
     "name": "John Doe",
-    "created_at": "2024-01-01T00:00:00Z"
+    "created_at": "2025-07-18T00:00:00Z"
 }))]
 pub struct User {
     pub id: Uuid,

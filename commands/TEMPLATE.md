@@ -5,8 +5,8 @@ description: "Brief description of what this command does"
 author: "Your Name"
 tags: ["category", "tag1", "tag2"]
 version: "1.0.0"
-created_at: "2024-01-01T00:00:00Z"
-updated_at: "2024-01-01T00:00:00Z"
+created_at: "2025-07-18T00:00:00Z"
+updated_at: "2025-07-18T00:00:00Z"
 ---
 
 # Command Name
