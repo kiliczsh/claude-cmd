@@ -7,17 +7,34 @@ export class FileSystemManager {
   public readonly claudeDir: string;
   public readonly commandsDir: string;
   public readonly configFile: string;
+  public readonly projectClaudeDir: string;
+  public readonly projectCommandsDir: string;
 
   constructor() {
     this.claudeDir = path.join(os.homedir(), '.claude');
     this.commandsDir = path.join(this.claudeDir, 'commands');
     this.configFile = path.join(this.claudeDir, 'settings.json');
+    this.projectClaudeDir = path.join(process.cwd(), '.claude');
+    this.projectCommandsDir = path.join(this.projectClaudeDir, 'commands');
   }
 
   ensureClaudeDirectory(): void {
     const directories = [
       this.claudeDir,
       this.commandsDir
+    ];
+
+    directories.forEach(dir => {
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+    });
+  }
+
+  ensureProjectClaudeDirectory(): void {
+    const directories = [
+      this.projectClaudeDir,
+      this.projectCommandsDir
     ];
 
     directories.forEach(dir => {
@@ -86,9 +103,9 @@ export class FileSystemManager {
     return results;
   }
 
-  saveCommand(fileName: string, content: string): string {
-    this.ensureClaudeDirectory();
-    const filePath = path.join(this.commandsDir, fileName);
+  saveCommand(fileName: string, content: string, targetLocation: 'global' | 'local' = 'global'): string {
+    const commandsDir = targetLocation === 'global' ? this.commandsDir : this.projectCommandsDir;
+    const filePath = path.join(commandsDir, fileName);
     
     try {
       // Ensure the directory exists for nested paths

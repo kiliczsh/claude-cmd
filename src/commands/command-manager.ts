@@ -280,7 +280,8 @@ export class CommandManager {
     });
 
     if (selectedCommand !== 'back') {
-      await this.installSpecificCommand(selectedCommand);
+      const targetLocation = await this.selectInstallLocation();
+      await this.installSpecificCommand(selectedCommand, targetLocation);
     }
   }
 
@@ -290,10 +291,23 @@ export class CommandManager {
       validate: (input) => input.trim() !== '' || 'Please enter a command name'
     });
 
-    await this.installSpecificCommand(command.trim());
+    const targetLocation = await this.selectInstallLocation();
+    await this.installSpecificCommand(command.trim(), targetLocation);
   }
 
-  async installSpecificCommand(commandName: string): Promise<boolean> {
+  private async selectInstallLocation(): Promise<'global' | 'local'> {
+    const location = await select<'global' | 'local'>({
+      message: '📁 Select installation location:',
+      choices: [
+        { name: '🏠 Global (~/.claude/commands)', value: 'global' },
+        { name: '📂 Project local (./.claude/commands)', value: 'local' }
+      ]
+    });
+
+    return location;
+  }
+
+  async installSpecificCommand(commandName: string, targetLocation: 'global' | 'local' = 'global'): Promise<boolean> {
     console.log(`\n${colorize.info(`Installing command: ${commandName}...`)}`);
     
     try {
@@ -304,7 +318,11 @@ export class CommandManager {
         return false;
       }
       
-      this.fs.ensureClaudeDirectory();
+      if (targetLocation === 'global') {
+        this.fs.ensureClaudeDirectory();
+      } else {
+        this.fs.ensureProjectClaudeDirectory();
+      }
       
       // Use command ID as-is - don't add extra categorization
       const fileName = commandData.filename || `${commandName}.md`;
@@ -329,8 +347,9 @@ export class CommandManager {
         return false;
       }
       
-      this.fs.saveCommand(fileName, content);
-      console.log(colorize.success(`Successfully installed command '${commandName}'`));
+      this.fs.saveCommand(fileName, content, targetLocation);
+      const locationText = targetLocation === 'global' ? 'globally' : 'locally';
+      console.log(colorize.success(`Successfully installed command '${commandName}' ${locationText}`));
       
       if (commandData.description) {
         console.log(colorize.info(`Description: ${commandData.description}`));
