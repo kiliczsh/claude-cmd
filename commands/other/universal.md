@@ -232,7 +232,7 @@ Follow Conventional Commits v1.0.0:
 - `style`: Code formatting (whitespace, semicolons, etc)
 
 **Breaking Changes**:
-- Add `!` after type/scope: `feat(api)!: remove deprecated endpoints`
+- Add '!' after type/scope: 'feat(api)!: remove deprecated endpoints'
 - Or use footer: `BREAKING CHANGE: description of the breaking change`
 
 **Example Commit**:
