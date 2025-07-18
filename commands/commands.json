@@ -2141,6 +2141,23 @@
     "updated_at": "2025-07-14T00:00:00Z"
   },
   {
+    "id": "universal",
+    "name": "Universal Development Principles",
+    "description": "Comprehensive development principles and best practices for AI assistants working on any project",
+    "filePath": "universal.md",
+    "author": "rishabhsonker",
+    "tags": [
+      "development",
+      "best-practices",
+      "workflow",
+      "mcp",
+      "git",
+      "code-quality"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
     "id": "workflow/create/epic",
     "name": "Epic",
     "description": "Orchestrates large-scale, cross-repository architectural epics with parallel coordination and dependency management",
