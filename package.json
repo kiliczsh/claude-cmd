@@ -1,6 +1,6 @@
 {
   "name": "claude-cmd",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A comprehensive CLI tool for managing Claude commands, configurations, and workflows.",
   "main": "dist/index.js",
   "bin": {

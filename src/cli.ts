@@ -1,4 +1,5 @@
 import { colorize, emoji } from './utils/colors';
+import { getAppNameWithVersion } from './utils/version';
 import { FileSystemManager } from './core/filesystem';
 import { ClaudeCommandAPI } from './core/api';
 import { ClaudeMdManager } from './commands/claudemd';
@@ -51,7 +52,7 @@ export class ClaudeCommandCLI {
 └██████┐███████┐██│  ██│└██████┌┘██████┌┘███████┐    └██████┐██║ ╚═╝ ██║██████┌┘
  └─────┘└──────┘└─┘  └─┘ └─────┘ └─────┘ └──────┘     └─────┘└─┘     └─┘└─────┘ 
 
-        Claude CMD v1.0
+        ${getAppNameWithVersion()}
         
         Created by Muhammed Kılıç (@kiliczsh)`)}`);
   }

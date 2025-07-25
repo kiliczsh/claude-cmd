@@ -1,4 +1,5 @@
 import { colorize } from '../utils/colors';
+import { getAppNameWithVersion } from '../utils/version';
 import { HelpAction } from '@/types';
 import { MenuNavigator, NavigationUtils } from '../utils/navigation';
 
@@ -29,7 +30,7 @@ export class HelpManager {
 
       switch (action) {
       case 'overview':
-        console.log(`${colorize.highlight('\n📖 Claude CMD v1.0 Overview')}`);
+        console.log(`${colorize.highlight(`\n📖 ${getAppNameWithVersion()} Overview`)}`);
         console.log(`
 ${colorize.bold('Purpose:')}
 This tool helps you manage Claude commands, configurations, and development workflows
