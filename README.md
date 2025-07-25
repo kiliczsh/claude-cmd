@@ -1,4 +1,6 @@
-<img width="679" height="477" alt="image" src="https://github.com/user-attachments/assets/d43919bf-be4f-49ee-b701-a3d7e3d53715" />
+<img width="680" height="494" alt="image" src="https://github.com/user-attachments/assets/785f74e6-99a5-40bd-bd9c-b17cb66476d5" />
+
+
 
 # claude-cmd
 
@@ -20,7 +22,7 @@ A lightweight (~46kB) and comprehensive CLI tool for managing Claude commands, c
 ### Global Installation
 
 ```bash
-npm install -g claude-cmd
+npm install -g claude-cmd@latest
 ```
 
 ## Usage
