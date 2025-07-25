@@ -9,6 +9,8 @@ export type MenuAction =
   | 'mcp' 
   | 'workflows' 
   | 'settings' 
+  | 'subagents'
+  | 'search_subagents'
   | 'help' 
   | 'exit'
   | 'back'

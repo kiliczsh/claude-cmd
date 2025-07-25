@@ -169,4 +169,24 @@ export class ClaudeCommandAPI {
     const results = await this.getCommands({ q: query });
     return { commands: results.data };
   }
+
+  // Sub-Agent specific methods (filtering commands with 'agent' tag)
+  async getSubAgents(params: CommandSearchParams = {}): Promise<ApiResponse<Command[]>> {
+    // Force filter by 'agent' tag
+    const subAgentParams = {
+      ...params,
+      tags: params.tags ? `${params.tags},agent` : 'agent'
+    };
+    
+    return await this.getCommands(subAgentParams);
+  }
+
+  async getSubAgent(subAgentId: string): Promise<Command> {
+    return await this.getCommand(subAgentId);
+  }
+
+  async searchSubAgents(query: string): Promise<SearchResult> {
+    const results = await this.getSubAgents({ q: query });
+    return { commands: results.data };
+  }
 } 

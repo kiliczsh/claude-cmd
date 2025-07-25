@@ -5,4 +5,7 @@ export * from './cli';
 export * from './api';
 
 // Configuration Types
-export * from './config'; 
+export * from './config';
+
+// Sub-Agent Types
+export * from './sub-agent'; 
