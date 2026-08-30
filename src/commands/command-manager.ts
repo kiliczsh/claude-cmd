@@ -4,6 +4,7 @@ import { FileSystemManager } from '../core/filesystem';
 import { ClaudeCommandAPI } from '../core/api';
 import { Command } from '@/types';
 import { NavigationUtils } from '../utils/navigation';
+import { validateSkillContent } from './skill-validator';
 
 export class CommandManager {
   constructor(
@@ -359,8 +360,55 @@ export class CommandManager {
         console.log(colorize.error(`Failed to fetch content for command '${commandName}'.`));
         return false;
       }
-      
+
+      // Validate content before writing
+      const validation = validateSkillContent(content, fileName);
+      if (validation.errors.length > 0) {
+        console.log(colorize.warning(`⚠ Validation issues found in '${commandName}':`));
+        validation.errors.forEach(e => {
+          const field = e.field ? ` [${e.field}]` : '';
+          console.log(colorize.error(`  ERROR${field}: ${e.message}`));
+        });
+        validation.warnings.forEach(w => {
+          const field = w.field ? ` [${w.field}]` : '';
+          console.log(colorize.dim(`  WARN${field}: ${w.message}`));
+        });
+        const proceed = await confirm({
+          message: 'Install anyway despite validation errors?',
+          default: false
+        });
+        if (!proceed) {
+          console.log(colorize.info('Installation cancelled'));
+          return false;
+        }
+      } else if (validation.warnings.length > 0) {
+        validation.warnings.forEach(w => {
+          const field = w.field ? ` [${w.field}]` : '';
+          console.log(colorize.dim(`  warn${field}: ${w.message}`));
+        });
+      }
+
+      // Legacy write: ~/.claude/commands/<name>.md
       this.fs.saveCommand(fileName, content, targetLocation);
+
+      // Dual-write: ~/.claude/skills/<name>/SKILL.md (global installs only)
+      if (targetLocation === 'global') {
+        try {
+          this.fs.ensureSkillsDirectory();
+          const skillName = fileName.replace(/\.md$/, '').replace(/\//g, '-');
+          const frontmatter = {
+            name: skillName,
+            description: commandData.description || '',
+            ...(commandData.author ? { author: commandData.author } : {}),
+            ...(commandData.tags && commandData.tags.length > 0 ? { tags: commandData.tags } : {})
+          };
+          this.fs.saveSkill(skillName, frontmatter, content);
+        } catch (error) {
+          // Skill write failure is non-fatal — legacy path already succeeded
+          console.log(colorize.dim(`Note: skills/ write skipped: ${(error as Error).message}`));
+        }
+      }
+
       const locationText = targetLocation === 'global' ? 'globally' : 'locally';
       console.log(colorize.success(`Successfully installed command '${commandName}' ${locationText}`));
       

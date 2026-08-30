@@ -1,17 +1,29 @@
 ---
-allowed-tools: Task, Bash, Read, Write, Edit, MultiEdit
-name: "Command Name"
-description: "Brief description of what this command does"
-author: "Your Name"
-tags: ["category", "tag1", "tag2"]
-version: "1.0.0"
-created_at: "2025-07-18T00:00:00Z"
-updated_at: "2025-07-18T00:00:00Z"
+# Required fields (agentskills.io spec + Claude Code)
+name: "skill-name"
+description: "Brief description of what this skill does and when to use it. Used for automatic activation by agents. (agentskills.io: required, max 1024 chars)"
+
+# agentskills.io standard fields (optional)
+license: "MIT"
+compatibility: "Requires Claude Code. Works with any agentskills.io-compatible agent."
+metadata:
+  author: "Your Name"
+  tags: ["category", "tag1", "tag2"]
+  version: "1.0.0"
+  created_at: "2025-07-18T00:00:00Z"
+  updated_at: "2025-07-18T00:00:00Z"
+
+# Claude Code extensions (optional, not part of agentskills.io spec)
+allowed-tools: Read Write Edit Bash
+user-invocable: true
+argument-hint: "<argument-description>"
+# model: claude-sonnet-4-6
+# disable-model-invocation: false
 ---
 
-# Command Name
+# Skill Name
 
-Brief description of what this command does and its purpose.
+Brief description of what this skill does and its purpose.
 
 ## Features
 
@@ -21,7 +33,7 @@ Brief description of what this command does and its purpose.
 
 ## Usage
 
-Explain how to use this command:
+Explain how to use this skill:
 
 ### Basic Usage
 ```
@@ -51,7 +63,7 @@ More complex example
 
 ## Configuration
 
-If the command requires configuration, explain it here:
+If the skill requires configuration, explain it here:
 
 - Setting 1: What it does
 - Setting 2: What it does
@@ -64,6 +76,6 @@ If the command requires configuration, explain it here:
 
 ## Arguments
 
-If this command takes arguments, describe them:
+If this skill takes arguments, describe them:
 
 $ARGUMENTS

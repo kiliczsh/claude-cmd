@@ -1,3 +1,10 @@
+export interface ClaudeAuth {
+  githubToken: string;
+  githubLogin: string;
+  githubName: string | null;
+  savedAt: string;
+}
+
 export interface ClaudeConfig {
   allowedTools: string[];
   securityProfile: 'strict' | 'moderate' | 'permissive';
@@ -6,6 +13,7 @@ export interface ClaudeConfig {
   fileSystemAccess?: string;
   networkAccess?: string;
   workflowsEnabled?: boolean;
+  auth?: ClaudeAuth;
 }
 
 export interface SecurityProfile {

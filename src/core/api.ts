@@ -1,4 +1,4 @@
-import { Command, SearchResult, ApiResponse } from '@/types';
+import { Command, CommandsRegistry, CommandsRegistryV2, SearchResult, ApiResponse } from '@/types';
 import * as fs from 'fs';
 
 export interface CommandSearchParams {
@@ -15,12 +15,23 @@ export class ClaudeCommandAPI {
   private isUrl: boolean;
   private cachedCommands: Command[] | null = null;
   private cacheTimestamp: number = 0;
+  private cachedETag: string | null = null;
   private readonly CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
 
   constructor(dataSource?: string) {
     // Default to GitHub URL, but allow override with local path or custom URL
     this.commandsDataSource = dataSource || 'https://raw.githubusercontent.com/kiliczsh/claude-cmd/main/commands/commands.json';
     this.isUrl = this.commandsDataSource.startsWith('http://') || this.commandsDataSource.startsWith('https://');
+  }
+
+  /** Normalize a v1 (array) or v2 (versioned object) registry to a flat Command array */
+  private normalizeRegistry(data: CommandsRegistry): Command[] {
+    if (Array.isArray(data)) {
+      // v1: raw array
+      return data;
+    }
+    // v2: { version: 2, skills: [...] }
+    return (data as CommandsRegistryV2).skills;
   }
 
   private async loadCommandsData(): Promise<Command[]> {
@@ -32,20 +43,33 @@ export class ClaudeCommandAPI {
       }
 
       if (this.isUrl) {
-        // Fetch from URL
-        const response = await fetch(this.commandsDataSource);
+        // Fetch from URL with ETag caching
+        const headers: Record<string, string> = {};
+        if (this.cachedETag && this.cachedCommands) {
+          headers['If-None-Match'] = this.cachedETag;
+        }
+        const response = await fetch(this.commandsDataSource, { headers });
+        if (response.status === 304 && this.cachedCommands) {
+          // Not Modified — reuse cached data, reset timer
+          this.cacheTimestamp = now;
+          return this.cachedCommands;
+        }
         if (!response.ok) {
           throw new Error(`Failed to fetch commands (${response.status}): ${response.statusText}`);
         }
-        const data = await response.json() as Command[];
-        this.cachedCommands = data;
+        const etag = response.headers.get('etag');
+        const data = await response.json() as CommandsRegistry;
+        const commands = this.normalizeRegistry(data);
+        this.cachedCommands = commands;
         this.cacheTimestamp = now;
-        return data;
+        this.cachedETag = etag;
+        return commands;
       } else {
         // Load from local file
         if (fs.existsSync(this.commandsDataSource)) {
           const data = fs.readFileSync(this.commandsDataSource, 'utf-8');
-          const commands = JSON.parse(data) as Command[];
+          const parsed = JSON.parse(data) as CommandsRegistry;
+          const commands = this.normalizeRegistry(parsed);
           this.cachedCommands = commands;
           this.cacheTimestamp = now;
           return commands;

@@ -1,0 +1,26 @@
+name = "claude-cmd-registry"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "registry"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+[vars]
+GITHUB_CLIENT_ID = "REPLACE_WITH_YOUR_GITHUB_CLIENT_ID"
+CORS_ORIGINS = "https://claudecmd.com,https://www.claudecmd.com"
+
+[secrets]
+# Set these with: wrangler secret put GITHUB_CLIENT_SECRET
+# GITHUB_CLIENT_SECRET
+
+[env.staging]
+name = "claude-cmd-registry-staging"
+vars = { CORS_ORIGINS = "http://localhost:3000,https://staging.claudecmd.com" }
+
+[[env.staging.d1_databases]]
+binding = "DB"
+database_name = "registry-staging"
+database_id = "REPLACE_WITH_YOUR_STAGING_D1_DATABASE_ID"

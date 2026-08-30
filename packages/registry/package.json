@@ -1,0 +1,25 @@
+{
+  "name": "@claude-cmd/registry",
+  "version": "0.1.0",
+  "description": "Hosted registry API for claude-cmd skills (claudecmd.com/api/v2)",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "deploy:staging": "wrangler deploy --env staging",
+    "db:create": "wrangler d1 create registry",
+    "db:migrate": "wrangler d1 execute registry --file ./migrations/001_initial.sql",
+    "db:migrate:remote": "wrangler d1 execute registry --remote --file ./migrations/001_initial.sql",
+    "db:seed": "bun run scripts/seed.ts",
+    "db:seed:remote": "REMOTE=true bun run scripts/seed.ts",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "itty-router": "^5.0.18"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250109.0",
+    "typescript": "^5.0.0",
+    "wrangler": "^3.0.0"
+  }
+}

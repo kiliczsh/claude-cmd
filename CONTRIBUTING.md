@@ -17,8 +17,7 @@ Thank you for your interest in contributing to claude-cmd! This document provide
 
 ### Prerequisites
 
-- Node.js (version 18 or higher)
-- npm (version 8 or higher)
+- [Bun](https://bun.sh) (preferred) or Node.js 18+
 - Git
 - TypeScript
 
@@ -37,17 +36,17 @@ Thank you for your interest in contributing to claude-cmd! This document provide
 
 3. **Install dependencies**
    ```bash
-   npm install
+   bun install
    ```
 
 4. **Build the project**
    ```bash
-   npm run build
+   bun run build
    ```
 
 5. **Link for local testing**
    ```bash
-   npm link
+   bun run link
    ```
 
 6. **Test the CLI**
@@ -160,7 +159,7 @@ refactor(api): simplify command fetching logic
 
 ```bash
 # Build and link
-npm run build && npm link
+bun run build && bun run link
 
 # Test basic functionality
 claude-cmd --help
@@ -171,30 +170,51 @@ claude-cmd search git
 claude-cmd
 ```
 
-### Command Development
+### Skill Development
 
-#### Adding New Commands
+Skills are the primary contribution type. Every skill lives in its own directory as a `SKILL.md` file.
 
-1. **Create command file**: Add a new `.md` file in the `commands/` directory
-2. **Use YAML frontmatter** for metadata:
+**Full authoring guide:** [`docs/SKILL-authoring-guide.md`](docs/SKILL-authoring-guide.md)
+
+#### Adding a New Skill (Quick Start)
+
+1. **Copy the template**
+   ```bash
+   mkdir -p commands/<category>/<skill-name>
+   cp commands/TEMPLATE.md commands/<category>/<skill-name>/SKILL.md
+   ```
+
+2. **Edit the frontmatter and body** — required fields: `name`, `description`
    ```yaml
    ---
-   name: \"Command Name\"
-   description: \"Command description\"
-   author: \"Your Name\"
-   tags: [\"tag1\", \"tag2\"]
+   name: \"My Skill\"
+   description: \"What it does and when to use it.\"
+   metadata:
+     author: \"your-github-username\"
+     tags: [\"git\", \"generate\"]
+     version: \"1.0.0\"
+   allowed-tools: Read Bash(git:*)
    ---
    ```
-3. **Generate commands.json**: Run `npm run parse-commands`
-4. **Test locally**: Use `claude-cmd --local search` and `--local install`
 
-#### Command Structure
+3. **Regenerate the registry index**
+   ```bash
+   bun run parse-commands
+   ```
 
-Commands use a **filePath-based architecture** for optimal package size:
-- `commands.json` contains metadata only (76kB vs 2.4MB)
-- Individual `.md` files contain command content
-- Content is fetched dynamically during installation
-- Supports both local development and remote GitHub sources
+4. **Test locally**
+   ```bash
+   claude-cmd --local search my-skill
+   claude-cmd --local install my-skill
+   ```
+
+#### Skill Architecture
+
+Skills use a **filePath-based registry** for optimal package size:
+- `commands/commands.json` contains metadata only (~76kB)
+- Individual `SKILL.md` files contain content
+- Content is fetched dynamically at install time
+- Dual-write: skills are installed to both `~/.claude/commands/` (legacy) and `~/.claude/skills/` (new)
 
 ### Testing Checklist
 

@@ -11,6 +11,7 @@ import { WorkflowManager } from './commands/workflows';
 import { SettingsManager } from './commands/settings';
 import { HelpManager } from './commands/help';
 import { ProjectManager } from './commands/project';
+import { PluginManager } from './commands/plugin-manager';
 import { MenuAction, MenuChoice, SubAgentAction } from './types';
 import { globalNavigator, NavigationUtils } from './utils/navigation';
 
@@ -26,6 +27,7 @@ export class ClaudeCommandCLI {
   private settingsManager: SettingsManager;
   private helpManager: HelpManager;
   private projectManager: ProjectManager;
+  private pluginManager: PluginManager;
 
   constructor() {
     this.fs = new FileSystemManager();
@@ -41,6 +43,7 @@ export class ClaudeCommandCLI {
     this.settingsManager = new SettingsManager(this.fs);
     this.helpManager = new HelpManager();
     this.projectManager = new ProjectManager(this.claudeMd, this.permissionsManager);
+    this.pluginManager = new PluginManager();
   }
 
   showWelcome(): void {
@@ -76,6 +79,8 @@ export class ClaudeCommandCLI {
           { name: `${emoji.delete} Delete command`, value: 'delete' },
           { name: `🤖 Manage Sub-Agents`, value: 'subagents' },
           { name: `🔍 Search & Install Sub-Agents`, value: 'search_subagents' },
+          { name: `🔭 Browse & Discover Plugins`, value: 'browse_plugins' },
+          { name: `🔌 Plugin Manager`, value: 'plugins' },
           { name: '--- Configuration ---', value: '--- Configuration ---' },
           { name: `${emoji.config} CLAUDE.md Management`, value: 'claudemd' },
           { name: `${emoji.key} Project Initialization`, value: 'init' },
@@ -139,7 +144,15 @@ export class ClaudeCommandCLI {
           case 'search_subagents':
             await this.subAgentManager.searchAndInstallSubAgents();
             break;
-            
+
+          case 'browse_plugins':
+            await this.pluginManager.browsePlugins();
+            break;
+
+          case 'plugins':
+            await this.pluginManager.handlePluginsMenu();
+            break;
+
           case 'workflows':
             await this.workflowManager.handleWorkflows();
             break;

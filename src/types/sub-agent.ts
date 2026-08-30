@@ -15,6 +15,7 @@ export interface SubAgentFrontMatter {
   name: string;
   description: string;
   tools?: string | string[];
+  model?: string;
   author?: string;
   version?: string;
   created_at?: string;

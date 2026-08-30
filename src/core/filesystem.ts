@@ -1,12 +1,23 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as os from 'os';
+import * as yaml from 'js-yaml';
 import { ClaudeConfig, SubAgent, SubAgentFrontMatter, ParsedSubAgent } from '../types';
+
+export interface SkillFrontmatter {
+  name: string;
+  description: string;
+  author?: string;
+  version?: string;
+  tags?: string[];
+  [key: string]: unknown;
+}
 
 export class FileSystemManager {
   public readonly claudeDir: string;
   public readonly commandsDir: string;
   public readonly agentsDir: string;
+  public readonly skillsDir: string;
   public readonly configFile: string;
   public readonly projectClaudeDir: string;
   public readonly projectCommandsDir: string;
@@ -16,6 +27,7 @@ export class FileSystemManager {
     this.claudeDir = path.join(os.homedir(), '.claude');
     this.commandsDir = path.join(this.claudeDir, 'commands');
     this.agentsDir = path.join(this.claudeDir, 'agents');
+    this.skillsDir = path.join(this.claudeDir, 'skills');
     this.configFile = path.join(this.claudeDir, 'settings.json');
     this.projectClaudeDir = path.join(process.cwd(), '.claude');
     this.projectCommandsDir = path.join(this.projectClaudeDir, 'commands');
@@ -201,6 +213,36 @@ export class FileSystemManager {
     }
   }
 
+  ensureSkillsDirectory(): void {
+    if (!fs.existsSync(this.skillsDir)) {
+      fs.mkdirSync(this.skillsDir, { recursive: true });
+    }
+  }
+
+  saveSkill(name: string, frontmatter: SkillFrontmatter, content: string): string {
+    const skillDir = path.join(this.skillsDir, name);
+    const filePath = path.join(skillDir, 'SKILL.md');
+
+    if (!fs.existsSync(skillDir)) {
+      fs.mkdirSync(skillDir, { recursive: true });
+    }
+
+    const yamlContent = yaml.dump(frontmatter, { lineWidth: -1 });
+    const fileContent = `---\n${yamlContent}---\n\n${content}`;
+
+    try {
+      fs.writeFileSync(filePath, fileContent, 'utf8');
+      return filePath;
+    } catch (error) {
+      throw new Error(`Failed to save skill: ${(error as Error).message}`);
+    }
+  }
+
+  supportsSkills(): boolean {
+    const config = this.getClaudeConfig();
+    return !!(config as ClaudeConfig & { enableSkills?: boolean }).enableSkills;
+  }
+
   listInstalledSubAgents(): string[] {
     const globalAgents = this.getSubAgentsFromDirectory(this.agentsDir);
     const projectAgents = this.getSubAgentsFromDirectory(this.projectAgentsDir);
@@ -241,7 +283,7 @@ export class FileSystemManager {
     const [, yamlContent, systemPrompt] = match;
     
     try {
-      const frontMatter = this.parseYaml(yamlContent) as SubAgentFrontMatter;
+      const frontMatter = yaml.load(yamlContent) as SubAgentFrontMatter;
       return {
         frontMatter,
         systemPrompt: systemPrompt.trim()
@@ -249,37 +291,6 @@ export class FileSystemManager {
     } catch (error) {
       throw new Error(`Failed to parse YAML frontmatter: ${(error as Error).message}`);
     }
-  }
-
-  private parseYaml(yamlContent: string): any {
-    const result: any = {};
-    const lines = yamlContent.split('\n');
-
-    for (const line of lines) {
-      const trimmedLine = line.trim();
-      if (!trimmedLine || trimmedLine.startsWith('#')) {
-        continue;
-      }
-
-      const colonIndex = trimmedLine.indexOf(':');
-      if (colonIndex === -1) {
-        continue;
-      }
-
-      const key = trimmedLine.substring(0, colonIndex).trim();
-      const value = trimmedLine.substring(colonIndex + 1).trim();
-
-      if (key === 'tools' && value.startsWith('[') && value.endsWith(']')) {
-        // Parse array format: [tool1, tool2, tool3]
-        const arrayContent = value.slice(1, -1);
-        result[key] = arrayContent.split(',').map(item => item.trim().replace(/['"]/g, ''));
-      } else {
-        // Remove quotes if present
-        result[key] = value.replace(/^['"]|['"]$/g, '');
-      }
-    }
-
-    return result;
   }
 
   saveSubAgent(name: string, frontMatter: SubAgentFrontMatter, systemPrompt: string, targetLocation: 'global' | 'local' = 'global'): string {
@@ -312,7 +323,11 @@ export class FileSystemManager {
       const toolsArray = Array.isArray(frontMatter.tools) ? frontMatter.tools : [frontMatter.tools];
       yamlContent += `tools: [${toolsArray.join(', ')}]\n`;
     }
-    
+
+    if (frontMatter.model) {
+      yamlContent += `model: ${frontMatter.model}\n`;
+    }
+
     if (frontMatter.author) {
       yamlContent += `author: ${frontMatter.author}\n`;
     }

@@ -12,7 +12,7 @@
     "link": "npm link",
     "prelink": "npm run build",
     "clean": "rm -rf dist",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "bun test",
     "parse-commands": "ts-node scripts/parse-commands.ts"
   },
   "repository": {

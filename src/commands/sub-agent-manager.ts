@@ -4,6 +4,7 @@ import { FileSystemManager } from '../core/filesystem';
 import { ClaudeCommandAPI } from '../core/api';
 import { SubAgentFrontMatter, SubAgentTemplate, SUB_AGENT_TEMPLATES, DEFAULT_SUB_AGENT_TOOLS, AVAILABLE_TOOLS, Command } from '../types';
 import { NavigationUtils } from '../utils/navigation';
+import * as yaml from 'js-yaml';
 
 export class SubAgentManager {
   constructor(
@@ -732,7 +733,7 @@ Your role is to:
       }
 
       const [, yamlContent, commandContent] = match;
-      const commandFrontMatter = this.parseYaml(yamlContent);
+      const commandFrontMatter = yaml.load(yamlContent) as Record<string, any>;
 
       // Convert command frontmatter to sub-agent frontmatter
       const frontMatter: SubAgentFrontMatter = {
@@ -752,37 +753,6 @@ Your role is to:
     } catch (error) {
       throw new Error(`Failed to convert command to sub-agent: ${(error as Error).message}`);
     }
-  }
-
-  private parseYaml(yamlContent: string): any {
-    const result: any = {};
-    const lines = yamlContent.split('\n');
-
-    for (const line of lines) {
-      const trimmedLine = line.trim();
-      if (!trimmedLine || trimmedLine.startsWith('#')) {
-        continue;
-      }
-
-      const colonIndex = trimmedLine.indexOf(':');
-      if (colonIndex === -1) {
-        continue;
-      }
-
-      const key = trimmedLine.substring(0, colonIndex).trim();
-      const value = trimmedLine.substring(colonIndex + 1).trim();
-
-      if (key === 'allowed-tools' && value.includes(',')) {
-        result[key] = value.split(',').map(item => item.trim());
-      } else if (key === 'tags' && value.startsWith('[') && value.endsWith(']')) {
-        const arrayContent = value.slice(1, -1);
-        result[key] = arrayContent.split(',').map(item => item.trim().replace(/['"]/g, ''));
-      } else {
-        result[key] = value.replace(/^['"]|['"]$/g, '');
-      }
-    }
-
-    return result;
   }
 
   private extractToolsFromCommand(commandFrontMatter: any): string[] {
